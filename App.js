@@ -1,20 +1,51 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SearchBar } from 'react-native-elements';
+import React, {useState} from 'react';
 
-export default function App() {
+
+export default class App extends React.Component {
+  state = {
+    search: '',
+  };
+
+  updateSearch = (search) => {
+    this.setState({ search });
+  };
+
+  render() {
+    const { search } = this.state;
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <SafeAreaView>
+
+    <View style={styles.header}>
+      <Text style={{color:'red',fontSize:30 }}>DUA GÖNDER</Text>
+      
       <StatusBar style="auto" />
-    </View>
+      </View>
+
+    <SearchBar
+        placeholder="Aradığınız dua / kelime"
+        onChangeText={this.updateSearch}
+        value={search}
+        lightTheme={true}s
+        clearIcon={true}
+      />
+      
+    </SafeAreaView>
   );
+
+
+};
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
+
+  header: {  
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
   },
+
 });
