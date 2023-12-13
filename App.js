@@ -1,20 +1,48 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { View, TextInput, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { SearchBar } from 'react-native-elements';
+import { color } from 'react-native-elements/dist/helpers';
+import { StatusBar } from 'expo-status-bar';  
 
-export default function App() {
+const App = () => {
+  const [searchText, setSearchText] = useState('');
+
+  const handleSearch = (text) => {
+    setSearchText(text);
+    
+  };
+
   return (
+    <SafeAreaView>
+       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <Text  style={styles.header}>DUA GÖNDER</Text> 
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <SearchBar
+        placeholder="Type here to search"
+        onChangeText={handleSearch}
+        value={searchText}
+        lightTheme={true}
+        round
+        cancelIcon={true}
+      />
+      
     </View>
+    </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  header:{
+  color:'blue',
+  display:
   },
+
+
+  container: {
+    display:'flex',
+    justifyContent:'center'
+  },
+
 });
+
+export default App;
