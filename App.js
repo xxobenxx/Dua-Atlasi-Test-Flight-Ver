@@ -10,7 +10,6 @@ const App = () => {
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       <TopTabsNavigator />
 
-      
     </NavigationContainer>
   );
 };
