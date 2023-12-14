@@ -1,47 +1,31 @@
-import React, { useState } from 'react';
-import { View, TextInput, Text, StyleSheet, SafeAreaView } from 'react-native';
-import { SearchBar } from 'react-native-elements';
-import { color } from 'react-native-elements/dist/helpers';
+import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';  
+import { NavigationContainer } from '@react-navigation/native';
+import TopTabsNavigator from './navigation/Navigator';
+import { View, StyleSheet, SafeAreaView } from 'react-native';
+
 
 const App = () => {
-  const [searchText, setSearchText] = useState('');
-
-  const handleSearch = (text) => {
-    setSearchText(text);
-    
-  };
-
+  
   return (
-    <SafeAreaView>
-       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
-      <Text  style={styles.header}>DUA GÖNDER</Text> 
-    <View style={styles.container}>
-      <SearchBar
-        placeholder="Type here to search"
-        onChangeText={handleSearch}
-        value={searchText}
-        lightTheme={true}
-        round
-        cancelIcon={true}
-      />
+    
+  <NavigationContainer>
+    <StatusBar barStyle="dark-content" />
+    <TopTabsNavigator/>
+
+   <SafeAreaView>
+   
+    
+  
+    <View/>
       
-    </View>
     </SafeAreaView>
+    </NavigationContainer>
   );
 };
 
 const styles = StyleSheet.create({
-  header:{
-  color:'blue',
-  display:
-  },
-
-
-  container: {
-    display:'flex',
-    justifyContent:'center'
-  },
+ 
 
 });
 
