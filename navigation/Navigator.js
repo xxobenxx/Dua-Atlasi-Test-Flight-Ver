@@ -12,7 +12,7 @@ const TopTabsNavigator = () => {
   return (
     <>
     <StatusBar barStyle="dark-content" />
-    <Tab.Navigator style={{ marginTop: 33 }}
+    <Tab.Navigator style={{ marginTop: 32 }}
     tabBarOptions={{
       activeTintColor: 'gold',
       style: { backgroundColor: 'rgb(22, 93, 49)',padding: 20 },
@@ -21,7 +21,7 @@ const TopTabsNavigator = () => {
     }}
     screenOptions={{
       tabBarLabelStyle: { fontSize: 12 },
-      tabBarItemStyle: { width: "auto", alignContent:"space-around" },
+      tabBarItemStyle: { width: "auto"},
       
       tabBarStyle: { backgroundColor: 'rgb(22, 93, 49)' },
     }}
