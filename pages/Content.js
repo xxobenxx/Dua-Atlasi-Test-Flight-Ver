@@ -1,5 +1,7 @@
-import React from 'react';
-import {Text, View} from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { View, Text, StyleSheet, SafeAreaView, Button, ScrollView, Keyboard, TouchableOpacity } from 'react-native';
+import axios from 'axios';
+
 
 const Content = () => {
   return (
