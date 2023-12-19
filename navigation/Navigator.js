@@ -5,6 +5,7 @@ import About from '../pages/about';
 import Members from '../pages/Members';
 import Content from '../pages/Content';
 import Home from '../pages/Home';
+import Tesbih from '../pages/Tesbih';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -26,6 +27,7 @@ const TopTabsNavigator = () => {
     >
       <Tab.Screen name="DUA GÖNDER" component={Home} />
       <Tab.Screen name="DUALAR" component={Content} />
+      <Tab.Screen name="TESBIH" component={Tesbih} /> 
       <Tab.Screen name="HAKKINDA" component={About} />
       <Tab.Screen name="REKLAMLARI KAPAT" component={Members} />
     </Tab.Navigator>
