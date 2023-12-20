@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -6,16 +6,17 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  Button
 } from 'react-native';
 import { SearchBar } from 'react-native-elements';
 import Clipboard from '@react-native-community/clipboard';
-
-
+import { Audio } from 'expo-av';
 import {dataWithMeaning} from '../data/data_with_meaning';
 
 const Home = () => {
   const [searchText, setSearchText] = useState('');
   const [matchingVerses, setMatchingVerses] = useState([]);
+  const [sound, setSound] = useState();
 
   const handleChange = (text) => setSearchText(text);
 
@@ -47,6 +48,27 @@ const Home = () => {
       });
   };
   
+  async function playSound(audio) {
+    console.log('Loading Sound');
+    const { sound } = await Audio.Sound.createAsync( {uri:audio})
+    setSound(sound);
+
+
+    console.log('Playing Sound');
+    sound.setIsLoopingAsync(false)
+    await sound.playAsync();
+
+
+  }
+
+  React.useEffect(() => {
+    return sound
+      ? () => {
+          console.log('Unloading Sound');
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound])
 
   return (
     <SafeAreaView>
@@ -81,7 +103,14 @@ const Home = () => {
             >
               <Text style={styles.verseText}>Verse: {verse.verse}</Text>
               <Text style={styles.verseText}>Translation: {verse.translation.text}</Text>
-              <Text style={styles.verseText}>Audio: {verse.surah_audio}</Text>
+              { sound ?     <TouchableOpacity onPress={()=>{
+    sound.stopAsync()
+              setSound(null)
+            }}>
+              <Text style={styles.verseText}>DURDUR</Text>
+              </TouchableOpacity> : <TouchableOpacity onPress={()=>playSound(verse.surah_audio)}>
+              <Text style={styles.verseText}>DİNLE</Text>
+              </TouchableOpacity>}
             </TouchableOpacity>
           ))}
         </ScrollView>

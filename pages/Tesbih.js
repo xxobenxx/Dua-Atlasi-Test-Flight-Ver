@@ -1,34 +1,49 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { set } from 'react-native-clipboard';
 
 const Tesbih = () => {
   const [count, setCount] = useState(0);
+  const [resetCounter, setResetCounter] = useState(0);
+
 
   const reset = () => {
     setCount(0);
   };
 
-  const specialValues = [12, 23, 34, 45, 56, 67, 78, 89];
-  const isSpecialValue = specialValues.includes(count);
-
   const handleTextPress = () => {
-    if (count < 99) {
+    if (count < 34) {
       setCount(count + 1);
     } else {
       setCount(0);
+      setResetCounter(resetCounter + 1);
     }
+  };
+
+  const getDisplayText = () => {
+    if (count === 34) {
+      return 'N';
+    }
+    return count;
   };
 
   return (
     <View style={styles.container}>
+      
+      <Text style={{ marginTop: 20, fontSize: 30, fontWeight: 'bold' }}>
+        {resetCounter} TUR</Text>
+
+
       <TouchableOpacity onPress={handleTextPress}>
-        <Text style={[styles.tnum, { color: isSpecialValue ? 'orange' : 'black' }]}>
-          {count}
+        <Text style={[styles.tnum, { color: count === 34  ? 'gold' : 'black' }]}>
+          {getDisplayText()}
         </Text>
       </TouchableOpacity>
+
+
       <View style={styles.btnwrap}>
         <TouchableOpacity style={styles.rbtn} onPress={reset}>
-          <Text style={{ color: '#fffb', fontSize: 22 }}>SAYACI SIFIRLA</Text>
+          <Text style={{ color: 'gold', fontSize: 22 }}>TESBİHİ SIFIRLA</Text>
         </TouchableOpacity>
       </View>
     </View>
