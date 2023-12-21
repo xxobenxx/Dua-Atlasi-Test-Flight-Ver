@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, ScrollView,StyleSheet } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { dataWithMeaning } from '../data/data_with_meaning';
 
@@ -61,44 +61,50 @@ return acc;
 
   return (
     <View>
-      <Text>Total Surahs: {totalSurahs}</Text>
+      
 
       <Picker
         selectedValue={selectedSurah}
         onValueChange={(value) => handleSurahChange(value)}
       >
       
-        <Picker.Item label="Select Surah" value={null} />
+        <Picker.Item label="Sure Seçiniz" value={null} />
         {surahs.map((surah) => (
-          <Picker.Item key={surah} label={`Surah ${surah}`} value={surah} />
+          <Picker.Item key={surah} label={`${surah}. Sure`} value={surah} />
         ))}
       </Picker>
 
       {selectedSurah && (
         <View>
-          <Text>Selected Surah: {selectedSurah}</Text>
+          
 
           <Picker
             selectedValue={selectedVerse}
             onValueChange={(value) => handleVerseChange(value)}
           >
-            <Picker.Item label="Select Verse" value={null} />
+            <Picker.Item label="Ayet Seçiniz" value={null} />
             {verses.map((verse) => (
-          <Picker.Item key={verse.verse_number} label={`Verse ${verse.verse_number}`} value={verse.verse_number} />
+          <Picker.Item key={verse.verse_number} label={`${verse.verse_number}. Ayet`} value={verse.verse_number} />
         ))}
           </Picker>
 
           {selectedVerse && (
-            <View>
-              <Text>Translation</Text>
-              <Text>{selectedTranslation || "Translation not available"}</Text>
+             <ScrollView style={styles.resultsContainer}>
+              <Text style={{fontSize: 25, fontWeight: 'bold' }}>Meali:</Text>
+              <Text style={{fontSize: 25 }}>{selectedTranslation || "Aradığınız Sayfa Bulunamadı."}</Text>
 
-            </View>
+            </ScrollView>
           )}
         </View>
       )}
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  resultsContainer:{
+  margin: 8,
+  },
+})
 
 export default Content;

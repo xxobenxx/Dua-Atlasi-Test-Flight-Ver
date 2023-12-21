@@ -6,12 +6,14 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
-  Button
+  ImageBackground,
 } from 'react-native';
 import { SearchBar } from 'react-native-elements';
 import Clipboard from '@react-native-community/clipboard';
 import { Audio } from 'expo-av';
 import {dataWithMeaning} from '../data/data_with_meaning';
+
+
 
 const Home = () => {
   const [searchText, setSearchText] = useState('');
@@ -33,6 +35,9 @@ const Home = () => {
   
     setMatchingVerses(foundVerses);
   };
+
+
+
 
   const handleVerseSelection = (selectedVerse) => {
     const clipboardContent = `Sure: ${selectedVerse.verse}\nAnlamı: ${
@@ -71,26 +76,35 @@ const Home = () => {
   }, [sound])
 
   return (
-    <SafeAreaView>
-      <Text style={styles.header}>SEARCH AND SEND</Text>
+    <SafeAreaView style={{backgroundColor: 'transparent'}}>
 
       <View style={styles.container}>
+
+      <ImageBackground
+        source={require('../assets/bckground.jpg')} 
+        style={styles.backgroundImage}
+      ></ImageBackground>
+
+      <Text style={styles.header}>DUA ATLASI</Text>
+     
         <SearchBar
-          placeholder="Search for verse or meaning"
+          placeholder="Aradığınız kelime"
           onChangeText={handleChange}
           value={searchText}
           lightTheme={true}
-          round
+          round={true}
           cancelIcon={true}
-          
+        justifyContent="center"
         />
+      
+          
 
         <TouchableOpacity
           onPress={handleSearch}
           style={styles.buttonContainer}
         >
           <View style={styles.button}>
-            <Text style={styles.buttonText}>Dua Bul / Find</Text>
+            <Text style={styles.buttonText}>DUA BUL</Text>
           </View>
         </TouchableOpacity>
 
@@ -101,15 +115,15 @@ const Home = () => {
               onPress={() => handleVerseSelection(verse)}
               style={styles.verseContainer}
             >
-              <Text style={styles.verseText}>Verse: {verse.verse}</Text>
-              <Text style={styles.verseText}>Translation: {verse.translation.text}</Text>
-              { sound ?     <TouchableOpacity onPress={()=>{
+              <Text style={styles.verseText}>Ayet: {verse.verse}</Text>
+              <Text style={styles.verseText}>Meali: {verse.translation.text}</Text>
+              { sound ?     <TouchableOpacity style={styles.playerButton} onPress={()=>{
     sound.stopAsync()
               setSound(null)
             }}>
-              <Text style={styles.verseText}>DURDUR</Text>
-              </TouchableOpacity> : <TouchableOpacity onPress={()=>playSound(verse.surah_audio)}>
-              <Text style={styles.verseText}>DİNLE</Text>
+              <Text style={{fontSize: 18, fontWeight: 'bold',color: 'brown', }} >DURDUR</Text>
+              </TouchableOpacity> : <TouchableOpacity style={styles.playerButton} onPress={()=>playSound(verse.surah_audio)}>
+              <Text style={{fontSize: 18, fontWeight: 'bold',color: 'orange', }}  >DİNLE</Text>
               </TouchableOpacity>}
             </TouchableOpacity>
           ))}
@@ -120,33 +134,47 @@ const Home = () => {
 };
 
 const styles = StyleSheet.create({
+
+  backgroundImage: {
+    flex: 1,
+    justifyContent: 'center',
+    resizeMode: 'cover', 
+    width: '100%', 
+    height: '100%',
+    alignItems: 'center'
+  }, 
+
   header: {
+    fontFamily: 'Helvetica',
     color: 'black',
-    fontSize: 35,
+    fontSize: 40,
     fontWeight: 'bold',
     textAlign: 'center',
+    marginTop: 10,
+    marginBottom: 10,
   },
 
   container: {
     margin: 10,
+    backgroundColor: 'transparent'
   },
 
   buttonContainer: {
     alignItems: 'center',
-    marginTop: 10,
+    margin: 10,
   },
 
   button: {
     borderWidth: 1,
     borderColor: 'black',
-    borderRadius: 5,
-    padding: 8,
+    borderRadius: 25,
+    padding: 15,
     marginTop: 10,
     backgroundColor: '#208796',
   },
 
   buttonText: {
-    fontSize: 18,
+    fontSize: 25,
     textAlign: 'center',
     color: 'gold',
   },
@@ -161,6 +189,19 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginVertical: 5,
   },
+
+  playerButton: {
+    borderWidth: 1,
+    backgroundColor: '#208796',
+    borderRadius: 25,
+    padding: 5,
+    margin: 10,
+    borderColor: 'black',
+    alignItems: 'center',
+    
+  }
+  
+  
 });
 
 export default Home;

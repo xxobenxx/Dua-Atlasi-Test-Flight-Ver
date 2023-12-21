@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet, SafeAreaView,} from 'react-native';
+import {Text, View, StyleSheet, SafeAreaView,ImageBackground,} from 'react-native';
 
 
 const About = () => {
@@ -8,11 +8,14 @@ const About = () => {
 
     
       <View style={styles.aboutText}>
-<Text>El Turco Services </Text>
-<Text>All rights reserved 2023. </Text>
+      <ImageBackground
+        source={require('../assets/bckground.jpg')} 
+        style={styles.backgroundImage}
+      ></ImageBackground>
+<Text>© El Turco Services 2023. </Text>
 <Text>T : +34 600 793 638 </Text>
 <Text>@: kerken[at]gmail </Text>
-<Text>L : Foret 18, 08019 BCN</Text>
+<Text>L : 08019 Barcelona</Text>
 </View>
     
     </SafeAreaView>
@@ -21,6 +24,12 @@ const About = () => {
 
 
 const styles = StyleSheet.create({
+
+  backgroundImage: {
+    flex: 1,
+    justifyContent: 'center',
+    resizeMode: 'cover', 
+  }, 
 
   aboutText: {
     padding: 10,

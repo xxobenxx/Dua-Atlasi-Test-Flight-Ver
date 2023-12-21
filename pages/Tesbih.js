@@ -8,14 +8,14 @@ const Tesbih = () => {
 
 
   const reset = () => {
-    setCount(0);
+    setCount(1);
   };
 
   const handleTextPress = () => {
     if (count < 34) {
       setCount(count + 1);
     } else {
-      setCount(0);
+      setCount(1);
       setResetCounter(resetCounter + 1);
     }
   };
@@ -43,7 +43,7 @@ const Tesbih = () => {
 
       <View style={styles.btnwrap}>
         <TouchableOpacity style={styles.rbtn} onPress={reset}>
-          <Text style={{ color: 'gold', fontSize: 22 }}>TESBİHİ SIFIRLA</Text>
+          <Text style={{ color: 'black', fontSize: 22, fontWeight: 'bold' }}>TESBİHİ SIFIRLA</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -55,11 +55,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    alignContent: 'center',
   },
   tnum: {
     borderWidth: 5,
-    borderColor: '#7cf246',
-    padding: 110,
+    borderColor: '#208796',
+    padding: 100,
     borderRadius: 63,
     fontSize: 60,
   },
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
   rbtn: {
     padding: 15,
     borderRadius: 30,
-    backgroundColor: 'black',
+    backgroundColor: 'orange',
     margin: 10,
     alignItems: 'center',
     shadowColor: 'rgba(0, 0, 0, 0.19)',
