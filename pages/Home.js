@@ -5,11 +5,11 @@ import {
   StyleSheet,
   SafeAreaView,
   ScrollView,
+  Share,
   TouchableOpacity,
   ImageBackground,
 } from 'react-native';
 import { SearchBar } from 'react-native-elements';
-import Clipboard from '@react-native-community/clipboard';
 import { Audio } from 'expo-av';
 import {dataWithMeaning} from '../data/data_with_meaning';
 
@@ -37,21 +37,6 @@ const Home = () => {
   };
 
 
-
-
-  const handleVerseSelection = (selectedVerse) => {
-    const clipboardContent = `Sure: ${selectedVerse.verse}\nAnlamı: ${
-      selectedVerse.translation.text || 'Not available'
-    }`;
-
-    Clipboard.setString(clipboardContent)
-      .then(() => {
-        alert('Selected verse copied to clipboard');
-      })
-      .catch((error) => {
-        console.error('Error copying to clipboard:', error);
-      });
-  };
   
   async function playSound(audio) {
     console.log('Loading Sound');
@@ -74,6 +59,38 @@ const Home = () => {
         }
       : undefined;
   }, [sound])
+
+  
+
+  const onShare = async (verse) => {
+    
+    const translationText = verse.translation ? verse.translation.text : 'Translation not available';
+  
+    const shareMessage = `Ayet: ${verse.verse}\nMeali: ${translationText}\nDinle: ${verse.surah_audio}`;
+  
+    try {
+      const result = await Share.share({
+        message: shareMessage
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          
+        } else {
+         
+        }
+      } else if (result.action === Share.dismissedAction) {
+        
+      }
+    } catch (error) {
+      Alert.alert(error.message);
+    }
+  };
+
+  const handleVerseSelection = (selectedVerse) => {
+
+    onShare(selectedVerse);
+  
+  }
 
   return (
     <SafeAreaView style={{backgroundColor: 'transparent'}}>
@@ -109,12 +126,15 @@ const Home = () => {
         </TouchableOpacity>
 
         <ScrollView style={styles.resultsContainer}>
+        {matchingVerses.length > 0 &&<Text style={{fontWeight: 'bold', color: 'orange' }}>PAYLAŞMAK İÇİN METNİN ÜZERİNE DOKUNUN</Text>}
           {matchingVerses.map((verse, index) => (
             <TouchableOpacity
               key={index}
               onPress={() => handleVerseSelection(verse)}
               style={styles.verseContainer}
+              
             >
+              
               <Text style={styles.verseText}>Ayet: {verse.verse}</Text>
               <Text style={styles.verseText}>Meali: {verse.translation.text}</Text>
               { sound ?     <TouchableOpacity style={styles.playerButton} onPress={()=>{
@@ -125,6 +145,9 @@ const Home = () => {
               </TouchableOpacity> : <TouchableOpacity style={styles.playerButton} onPress={()=>playSound(verse.surah_audio)}>
               <Text style={{fontSize: 18, fontWeight: 'bold',color: 'orange', }}  >DİNLE</Text>
               </TouchableOpacity>}
+
+              
+
             </TouchableOpacity>
           ))}
         </ScrollView>
@@ -183,6 +206,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: 'gray',
     marginVertical: 5,
+    
   },
 
   verseText: {

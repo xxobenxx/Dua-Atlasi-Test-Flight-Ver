@@ -18,7 +18,12 @@
       "supportsTablet": true,
       "bundleIdentifier": "your.bundle.identifier",
       "infoPlist": {
-        "UIBackgroundModes": ["audio"]
+        "UIBackgroundModes": ["audio"],
+        "splash": {
+          "image": "./assets/splash.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
       }
 
     },

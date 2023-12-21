@@ -2,11 +2,7 @@ import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import TopTabsNavigator from './navigation/Navigator';
-import {
-  StyleSheet,
-  // ImageBackground,
-} from 'react-native';
-import image from './assets/bckground.jpg';
+
 
 const App = () => {
   return (
