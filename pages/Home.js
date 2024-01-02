@@ -15,6 +15,7 @@ import {dataWithMeaning} from '../data/data_with_meaning';
 
 
 
+
 const Home = () => {
   const [searchText, setSearchText] = useState('');
   const [matchingVerses, setMatchingVerses] = useState([]);
@@ -135,8 +136,16 @@ const Home = () => {
               
             >
               
-              <Text style={styles.verseText}>Ayet: {verse.verse}</Text>
-              <Text style={styles.verseText}>Meali: {verse.translation.text}</Text>
+              <Text style={styles.verseText}> 
+              <Text style={{fontWeight: "bold"}}>Ayet         :</Text> {verse.verse}
+              </Text>
+              <Text style={styles.verseText}>
+              <Text style={{fontWeight: "bold"}}>Okunuşu:</Text> {verse.transcription}
+              </Text>
+              <Text style={styles.verseText}>
+              <Text style={{fontWeight: "bold"}}>Meali        :</Text> {verse.translation.text}
+              </Text>
+              <Text style={styles.verseText}>({verse.surah_name},{verse.surah_id}/{verse.verse_number})</Text>
               { sound ?     <TouchableOpacity style={styles.playerButton} onPress={()=>{
     sound.stopAsync()
               setSound(null)
