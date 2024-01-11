@@ -8,14 +8,15 @@ const About = () => {
 
     
       <View style={styles.aboutText}>
-      <ImageBackground
-        source={require('../assets/bckground.jpg')} 
-        style={styles.backgroundImage}
-      ></ImageBackground>
+<Text>Kaynak: DUALAR - Diyanet İşleri Başkanlığı Yayınları: 671. 8. Baskı, 2019 Ankara  </Text>      
+
+<View style={styles.contact}></View>
 <Text>© El Turco Services 2023. </Text>
 <Text>T : +34 600 793 638 </Text>
 <Text>@: kerken[at]gmail </Text>
 <Text>L : 08019 Barcelona</Text>
+
+
 </View>
     
     </SafeAreaView>
@@ -25,20 +26,25 @@ const About = () => {
 
 const styles = StyleSheet.create({
 
-  backgroundImage: {
-    flex: 1,
-    justifyContent: 'center',
-    resizeMode: 'cover', 
-  }, 
-
+  
   aboutText: {
+    alignItems: 'left',
     padding: 10,
     flexDirection: 'column',
-  textAlign: 'left',
-      fontFamily: 'Cochin',
-      fontSize: 20,
-      fontWeight: 'bold',
+    textAlign: 'left',
+    
     },
+
+    contact: {
+      alignItems: 'flex-end',
+      padding: 10,
+      // flexDirection: 'column',
+      textAlign: 'left',
+      
+      },
+
+
+
   }
 );
 

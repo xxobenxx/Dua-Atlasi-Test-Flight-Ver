@@ -31,10 +31,13 @@ const Home = () => {
         verse.meaning.toLowerCase().includes(keyword) 
     );
 
-    console.log('Search keyword:', keyword);
+
+  console.log('Search keyword:', keyword);
   console.log('Found Verses:', foundVerses);
   
+
     setMatchingVerses(foundVerses);
+    
   };
 
 
@@ -67,7 +70,7 @@ const Home = () => {
     
     const translationText = verse.translation ? verse.translation.text : 'Translation not available';
   
-    const shareMessage = `Ayet: ${verse.verse}\nMeali: ${translationText}\nDinle: ${verse.surah_audio}`;
+    const shareMessage = `      ${verse.verse}\nMeali: ${translationText}\nDinle: ${verse.surah_audio}`;
   
     try {
       const result = await Share.share({
@@ -98,15 +101,12 @@ const Home = () => {
 
       <View style={styles.container}>
 
-      <ImageBackground
-        source={require('../assets/bckground.jpg')} 
-        style={styles.backgroundImage}
-      ></ImageBackground>
+      
 
       <Text style={styles.header}>DUA ATLASI</Text>
      
         <SearchBar
-          placeholder="Aradığınız kelime"
+          placeholder="Aradığız Kelime"
           onChangeText={handleChange}
           value={searchText}
           lightTheme={true}
@@ -127,33 +127,52 @@ const Home = () => {
         </TouchableOpacity>
 
         <ScrollView style={styles.resultsContainer}>
-        {matchingVerses.length > 0 &&<Text style={{fontWeight: 'bold', color: 'orange' }}>PAYLAŞMAK İÇİN METNİN ÜZERİNE DOKUNUN</Text>}
+        {matchingVerses.length > 0 && 
+    <>
+      <Text style={{fontWeight: 'bold', color: 'orange' }}>
+        PAYLAŞMAK İÇİN METNİN ÜZERİNE DOKUNUN
+      </Text>  
+
+      <Text style={{fontWeight: "bold"}}>
+        Bulunan Dua Sayısı: {matchingVerses.length}
+      </Text>
+    </>
+  } 
+       
           {matchingVerses.map((verse, index) => (
             <TouchableOpacity
               key={index}
               onPress={() => handleVerseSelection(verse)}
               style={styles.verseContainer}
-              
+              debugger
             >
               
+             
               <Text style={styles.verseText}> 
-              <Text style={{fontWeight: "bold"}}>Ayet         :</Text> {verse.verse}
+              <Text style={{fontWeight: "bold"}}>Dua         :</Text> {verse.verse}
               </Text>
               <Text style={styles.verseText}>
               <Text style={{fontWeight: "bold"}}>Okunuşu:</Text> {verse.transcription}
               </Text>
               <Text style={styles.verseText}>
-              <Text style={{fontWeight: "bold"}}>Meali        :</Text> {verse.translation.text}
+              <Text style={{fontWeight: "bold"}}>Meali       :</Text> {verse.translation.text}
               </Text>
-              <Text style={styles.verseText}>({verse.surah_name},{verse.surah_id}/{verse.verse_number})</Text>
-              { sound ?     <TouchableOpacity style={styles.playerButton} onPress={()=>{
-    sound.stopAsync()
-              setSound(null)
-            }}>
-              <Text style={{fontSize: 18, fontWeight: 'bold',color: 'brown', }} >DURDUR</Text>
-              </TouchableOpacity> : <TouchableOpacity style={styles.playerButton} onPress={()=>playSound(verse.surah_audio)}>
-              <Text style={{fontSize: 18, fontWeight: 'bold',color: 'orange', }}  >DİNLE</Text>
-              </TouchableOpacity>}
+              <Text style={styles.verseText}>({verse.surah_name} {verse.surah_id}{verse.verse_number})</Text>
+              
+              {verse.surah_audio && (
+              <TouchableOpacity style={styles.playerButton} onPress={() => playSound(verse.surah_audio)}>
+              <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'orange', }}>DİNLE</Text>
+              </TouchableOpacity>
+              )}
+
+             {sound && (
+             <TouchableOpacity style={styles.playerButton} onPress={() => {
+             sound.stopAsync();
+             setSound(null);
+           }}>
+    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'brown', }}>DURDUR</Text>
+  </TouchableOpacity>
+)}
 
               
 

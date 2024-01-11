@@ -24,7 +24,7 @@ const Tesbih = () => {
     if (count === 34) {
       return 'N';
     }
-    return count;
+    return count;f
   };
 
   return (
