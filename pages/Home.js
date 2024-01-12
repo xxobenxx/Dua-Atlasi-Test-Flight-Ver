@@ -144,7 +144,7 @@ const Home = () => {
               key={index}
               onPress={() => handleVerseSelection(verse)}
               style={styles.verseContainer}
-              debugger
+              
             >
               
              
