@@ -26,7 +26,7 @@ screenOptions={{
   
   },
   tabBarStyle: { backgroundColor: 'rgb(22, 93, 49)' },
-  padding: 20,
+  padding: 10,
 }}
 
 

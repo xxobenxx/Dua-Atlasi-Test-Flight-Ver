@@ -1,110 +1,83 @@
 import React, { useState } from 'react';
-import { View, Text, ScrollView,StyleSheet } from 'react-native';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { dataWithMeaning } from '../data/data_with_meaning';
 
 const Content = () => {
-  const [selectedSurah, setSelectedSurah] = useState(null);
-  const [selectedVerse, setSelectedVerse] = useState(null);
+  const [selectedSurahName, setSelectedSurahName] = useState(null);
   const [selectedTranslation, setSelectedTranslation] = useState(null);
 
+  const surahNames = [...new Set(dataWithMeaning.map((verse) => verse.surah_name))];
+  surahNames.sort((a, b) => a.localeCompare(b));
 
-  const surahs = dataWithMeaning.reduce((acc,curr)=>{
-if(!acc.includes(curr.surah_id)) {
-acc.push(curr.surah_id)
-}
-return acc;
-  },[])
-  const totalSurahs = surahs.length;
+  const verses = dataWithMeaning.filter((verse) => verse.surah_name === selectedSurahName);
 
-    const verses = dataWithMeaning.filter(verse=>{
-      return verse.surah_id == selectedSurah;
-    })
-
-
-
-
-  const handleSurahChange = (value) => {
-    setSelectedSurah(value);
-    setSelectedVerse(null); 
-    console.log('Selected Surah:', value);
+  const handleSurahNameChange = (value) => {
+    setSelectedSurahName(value);
+    console.log('Selected Surah Name:', value);
   };
 
-  const handleVerseChange = (value) => {
-    setSelectedVerse(value);
-    console.log('Selected Verse:', value);  
-  };
-
-
- 
   React.useEffect(() => {
-    if (selectedSurah !== null && selectedVerse !== null) {
-      let selectedVerseData = dataWithMeaning.find(
-        (verse) => {
-          console.log('Verse Data:', verse.surah_id, verse.verse_number);
-          return verse.surah_id == selectedSurah && verse.verse_number == selectedVerse;
-        }
-      );
-      console.log('selectedVerseData', selectedVerseData);
+    if (selectedSurahName) {
+      const resultText = verses
+        .map(
+          (verse) => (
+            <Text key={verse.id}>
 
-      if (selectedVerseData) {
-        setSelectedTranslation(selectedVerseData.translation.text);
+              <Text style={{ fontWeight: 'bold', fontSize: 18 }}>
+                {verse.surah_id}
+              </Text>
+
+              {'\n\n'}
+              {verse.verse}
+
+              <Text style={{ fontWeight: 'bold' }}>{'\n\nOkunuşu: '}</Text>
+              {verse.transcription}
+
+              <Text style={{ fontWeight: 'bold' }}>{'\n\nMeali        : '}</Text>
+              {verse.translation.text}
+            </Text>
+          )
+        )
+        .reduce((acc, textElement) => acc.concat(textElement, '\n\n'), []);
+
+      if (resultText.length > 0) {
+        setSelectedTranslation(resultText);
       } else {
-        setSelectedTranslation("Translation not available");
+        setSelectedTranslation('Listeden Görüntülemek Istediğiniz Duayı Seçin');
       }
     } else {
       setSelectedTranslation(null);
     }
-  }, [selectedSurah, selectedVerse]);
-
-  
+  }, [selectedSurahName]);
 
   return (
     <View>
-      
-
       <Picker
-        selectedValue={selectedSurah}
-        onValueChange={(value) => handleSurahChange(value)}
+        selectedValue={selectedSurahName}
+        onValueChange={(value) => handleSurahNameChange(value)}
       >
-      
-        <Picker.Item label="Sure Seçiniz" value={null} />
-        {surahs.map((surah) => (
-          <Picker.Item key={surah} label={`${surah}. Sure`} value={surah} />
+        <Picker.Item label="DUA KILAVUZU" value={null} />
+        {surahNames.map((surahName) => (
+          <Picker.Item key={surahName} label={surahName} value={surahName} />
         ))}
       </Picker>
 
-      {selectedSurah && (
-        <View>
-          
-
-          <Picker
-            selectedValue={selectedVerse}
-            onValueChange={(value) => handleVerseChange(value)}
-          >
-            <Picker.Item label="Ayet Seçiniz" value={null} />
-            {verses.map((verse) => (
-          <Picker.Item key={verse.verse_number} label={`${verse.verse_number}. Ayet`} value={verse.verse_number} />
-        ))}
-          </Picker>
-
-          {selectedVerse && (
-             <ScrollView style={styles.resultsContainer}>
-              <Text style={{fontSize: 25, fontWeight: 'bold' }}>Meali:</Text>
-              <Text style={{fontSize: 25 }}>{selectedTranslation || "Aradığınız Sayfa Bulunamadı."}</Text>
-
-            </ScrollView>
-          )}
-        </View>
+      {selectedSurahName && (
+        <ScrollView style={styles.resultsContainer}>
+         
+          <Text style={{ fontSize: 18 }}>{selectedTranslation || 'No verses available.'}</Text>
+        </ScrollView>
       )}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  resultsContainer:{
-  margin: 8,
+  resultsContainer: {
+    margin: 8,
+    
   },
-})
+});
 
 export default Content;

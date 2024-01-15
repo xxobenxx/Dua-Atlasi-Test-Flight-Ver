@@ -21,7 +21,7 @@ export const dataWithMeaning =
           "footnotes": null
         },
         "surah_audio": "https://archive.org/download/INDIRILIS_SIRASINA_GORE_SESLI_KURAN_MEALI/05-fatiha.mp3",
-        "meaning": "Besmele, Fatiha,Namaz"
+        "meaning": "Besmele, Fatiha, Namaz"
         },
         {
             "id": 301,
@@ -71,24 +71,25 @@ export const dataWithMeaning =
         },
         {
             "id": 6238,
-            "surah_id": "/ Ed’ıye,İbn Hıbbân",
+            "surah_id": "Ed’ıye,İbn Hıbbân",
             "surah_name": "Sebat Duası-2",
             "verse_number": 902,
-            "verse": "ََى طَ اعِتَكِ ِ ْفُ قُلُوبَنا اِلََ اصرُه ّم ّٰاَلل",
+            "verse": "ََى طَ اعِتَكِ ِ ْفُ قُلُوبَنا اِلََ اصرُه ّم ّٰاَلل",
             "page": 605,
             "juzNumber": 3,
             "transcription": "Allâhümme’srif kulûbenâ ilâ tâ’atike",
             "translation": {
                 "id": 999999,
                 "author": {
-                "id": 8,
-                "name": "Bayraktar Bayraklı",
-                "description": "Yeni Bir Anlayışın Işığında Kur'an Meali",
-                "language": "tr"
+                    "id": 8,
+                    "name": "Bayraktar Bayraklı",
+                    "description": "Yeni Bir Anlayışın Işığında Kur'an Meali",
+                    "language": "tr"
                 },
                 "text": "Allah’ım! Kalplerimizi sana itaat etmeye yönlendir.",
                 "footnotes": null
             },
+
             "surah_audio": "",
             "meaning": "Sebat, Azim, Metanet, Sabır, Direnme"
         },       
@@ -141,7 +142,7 @@ export const dataWithMeaning =
         {
             "id": 6242,
             "surah_id": "/ Eller Yıkanırken Okunacak Dua ",
-            "surah_name": "Abdest Duaları",
+            "surah_name": "Abdest Duaları-1",
             "verse_number": null,
             "verse": "نًوراِالْسَّالَمُْمَاءَطُهُورًا اَوَجَعَلَاٖذَى جَعَلَ الَّاَلحُمُدُللِّللِهِٰ ال",                      
             "page": 605,
@@ -164,7 +165,7 @@ export const dataWithMeaning =
         {
             "id": 6243,
             "surah_id": "/ Ağız Yıkanırken Okunacak Dua ",
-            "surah_name": "Abdest Duaları",
+            "surah_name": "Abdest Duaları-2",
             "verse_number": null,
             "verse": "نًوراِالْسَّالَمُْمَاءَطُهُورًا اَوَجَعَلَاٖذَى جَعَلَ الَّاَلحُمُدُللِّللِهِٰ ال",                      
             "page": 605,
@@ -187,7 +188,7 @@ export const dataWithMeaning =
         {
             "id": 6244,
             "surah_id": "/ Burna Su Verilirken Okunacak Dua ",
-            "surah_name": "Abdest Duaları",
+            "surah_name": "Abdest Duaları-3",
             "verse_number": null,
             "verse": "نًوراِالْسَّالَمُْمَاءَطُهُورًا اَوَجَعَلَاٖذَى جَعَلَ الَّاَلحُمُدُللِّللِهِٰ ال",                      
             "page": 605,
@@ -210,7 +211,7 @@ export const dataWithMeaning =
         {
             "id": 6245,
             "surah_id": "/ Yüz Yıkanırken Okunacak Dua ",
-            "surah_name": "Abdest Duaları",
+            "surah_name": "Abdest Duaları-4",
             "verse_number": null,
             "verse": "ٌوهِ َكَ يْوَمَ تْبَيُّضُ وُجُوهٌوهَ وَتْسَوّدُ ِى بُنُورٍيضَ وْجَهََ بُِهّمَّٰللَا",                      
             "page": 605,
@@ -233,7 +234,7 @@ export const dataWithMeaning =
         {
             "id": 6246,
             "surah_id": "/ Sağ Kol Yıkanırken Okunacak Dua ",
-            "surah_name": "Abdest Duaları",
+            "surah_name": "Abdest Duaları-5",
             "verse_number": null,
             "verse": "ْعِطِنِى كَتِابِى بَيِّمِنِى وَحِ اسْبِنِى حَسًابَ يِسْرًاََ أُهّمَّٰللَا",                      
             "page": 605,
@@ -256,7 +257,7 @@ export const dataWithMeaning =
         {
             "id": 6247,
             "surah_id": "/ Sol Kol Yıkanırken Okunacak Dua ",
-            "surah_name": "Abdest Duaları",
+            "surah_name": "Abdest Duaları-6",
             "verse_number": null,
             "verse": "ٖى وَالُتَحِ اسْبِنى تْعِطٖنِى كَتِابِى بِشَمِالَى وَالِمْنَ وَرَاءَ ظْهرََالُهّمَّٰللَِحَسًابَ اشِدًيدًا",                      
             "page": 605,
@@ -279,7 +280,7 @@ export const dataWithMeaning =
         {
             "id": 6248,
             "surah_id": "/ Baş Meshedilirken Okunacak Dua ",
-            "surah_name": "Abdest Duaları",
+            "surah_name": "Abdest Duaları-7",
             "verse_number": null,
             "verse": "مْنَ بَرَكِاتِكََِّىْلَ علََِغّشِِنِى بَرْحَمِتَكََ وَاَنزُهّمَّٰللَ",                      
             "page": 605,
@@ -302,7 +303,7 @@ export const dataWithMeaning =
         {
             "id": 6249,
             "surah_id": "/ Kulak Meshedilirken Okunacak Dua ",
-            "surah_name": "Abdest Duaları",
+            "surah_name": "Abdest Duaları-8",
             "verse_number": null,
             "verse": "َ ِبُعَوْنَ اَحَسَنُهَْقْوَلَ فَيّتَٖذَينَ يْسَتِمُعَوْنَ الَِّنِى مَنَ الْ اجَعَلُهّمَّٰللَ",                      
             "page": 605,
@@ -325,7 +326,7 @@ export const dataWithMeaning =
         {
             "id": 6250,
             "surah_id": "/ Boyun Meshedilirken Okunacak Dua ",
-            "surah_name": "Abdest Duaları",
+            "surah_name": "Abdest Duaları-9",
             "verse_number": null,
             "verse": "َارْعِتْقَرَقِبِتِى مَنّ النََأُهّمَّٰللَ",                      
             "page": 605,
@@ -348,7 +349,7 @@ export const dataWithMeaning =
         {
             "id": 6251,
             "surah_id": "/ Ayaklar Yıkanırken Okunacak Dua ",
-            "surah_name": "Abdest Duaları",
+            "surah_name": "Abdest Duaları-10",
             "verse_number": null,
             "verse": "ْقَدُامَْألَِّى الصَرِ اطَيْوَمَ تُزُولٖ فِيهَاََّ علََثِّبَتَ قَدَمَىُهّمَّٰللَ",                      
             "page": 605,
@@ -371,7 +372,7 @@ export const dataWithMeaning =
         {
             "id": 6252,
             "surah_id": "/ Abdest Bittikten Sonra Okunacak Dua ",
-            "surah_name": "Abdest Duaları",
+            "surah_name": "Abdest Duaları-11",
             "verse_number": null,
             "verse": "مَحّمًَدَ اعبُدُهَُ وأَيكَ للَّهُ َوَحدُهَالشرِّاللّهِ إِلَّانَالإِنّاَالإِشْهُد أأَنَاللّهُ واجعَلْنِي مِنَالَتُّوَّابِنَواجَعَلنِي مِنَالْمُتَطَهِّرِي مِنَالذَّنُوبِواجعَلنِي مِنْ عِبَادِكَالصَّالِحِينَوبإسْتِغْفَرَكَوأنتَأَرْحَمُالرَّاحِمِينَ",                      
             "page": 605,
@@ -441,7 +442,7 @@ export const dataWithMeaning =
             "id": 2,
             "surah_id": 1,
             "surah_name": "Fatiha",
-            "verse_number": 1-7,
+            "verse_number": 1-8,
             "verse": "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّح۪يمِ١﴾ اَلْحَمْدُ لِلّٰهِ رَبِّ الْعَالَم۪ينَۙ ﴿٢﴾ اَلرَّحْمٰنِ الرَّح۪يمِۙ ﴿٣﴾ مَالِكِ يَوْمِ الدّ۪ينِۜ ﴿٤﴾ اِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَع۪ينُۜ ﴿٥﴾ اِهْدِنَا الصِّرَاطَ الْمُسْتَق۪يمَۙ ﴿٦﴾ صِرَاطَ الَّذ۪ينَ اَنْعَمْتَ عَلَيْهِمْۙ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّٓالّ۪ينَ ﴿٧",
             "page": 0,
             "juzNumber": 1,
@@ -924,7 +925,7 @@ export const dataWithMeaning =
             "id": 6236,
             "surah_id": 114,
             "surah_name": "Nas",
-            "verse_number": 1-6,
+            "verse_number": 1-7,
             "verse": "مِنَ الْجِنَّةِ وَ النَّاسِ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ  مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ  إِلَهِ النَّاسِ مَلِكِ النَّاسِ  قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
             "page": 604,
             "juzNumber": 30,
