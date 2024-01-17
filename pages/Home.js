@@ -7,10 +7,13 @@ import {
   ScrollView,
   Share,
   TouchableOpacity,
+  Image
 } from 'react-native';
 import { SearchBar } from 'react-native-elements';
 import { Audio } from 'expo-av';
 import {dataWithMeaning} from '../data/data_with_meaning';
+import shareIcon from '../assets/shareIcon.png';
+
 
 
 
@@ -20,6 +23,8 @@ const Home = () => {
   const [matchingVerses, setMatchingVerses] = useState([]);
   const [sound, setSound] = useState();
   const [showPleaseTypeWarning, setShowPleaseTypeWarning] = useState(false);
+  const [noResultFoundWarning, setNoResultFoundWarning] = useState(false);
+
 
   const convertToLatin = (text) => {
     const turkishToLatinMap = {
@@ -43,6 +48,7 @@ const Home = () => {
   
     if (text.trim() === '') {
       setMatchingVerses([]);
+      setNoResultFoundWarning(false);
     }
   };
 
@@ -65,8 +71,14 @@ const Home = () => {
       console.log('Found Verses:', foundVerses);
   
       setMatchingVerses(foundVerses);
+
+    if (foundVerses.length === 0) {
+      setNoResultFoundWarning(true);
+    } else {
+      setNoResultFoundWarning(false);
     }
-  };
+  }
+};
 
 
   
@@ -99,7 +111,7 @@ const Home = () => {
     const translationText = verse.translation ? verse.translation.text : 'Translation not available';
     const audioMessage = verse.surah_audio ? `\nDinle: ${verse.surah_audio}` : '';
 
-    const shareMessage = `۞${verse.surah_name}۞\n\n\n•${verse.verse}•\n\nOkunuşu: ${verse.transcription}\n\nMeali       : ${translationText}${audioMessage}`;
+    const shareMessage = `۞${verse.surah_name}۞\n\n\n•${verse.verse}•\n\nOkunuşu: ${verse.transcription}\n\nMeali       : ${translationText}${audioMessage}\n\n\n\n DUA ATLASI`;
   
   
     try {
@@ -138,7 +150,7 @@ const Home = () => {
       <SearchBar
           
           margin= {2}
-          containerStyle={{ backgroundColor: '#9e544f', borderRadius: 10 }}
+          containerStyle={{ backgroundColor: '#9e544f', borderRadius: 20, padding: 8 }}
           placeholder="Niçin Dua Edeceksiniz?"
           onChangeText={handleChange}
           value={searchText}
@@ -148,7 +160,6 @@ const Home = () => {
           inputStyle={{
             fontSize: 27,
             color: 'black',
-            paddingVertical: 8
             }}
 
 
@@ -166,19 +177,27 @@ const Home = () => {
         <ScrollView style={styles.resultsContainer}
           >
             {showPleaseTypeWarning && (
-    <View style={styles.warningContainer}>
-      <Text style={styles.warningText}>⚠️ Lütfen bir anahtar kelime yazın</Text>
-    </View>
-  )}
+            <View style={styles.warningContainer}>
+              <Text style={styles.warningText}>⚠️ Lütfen aradığınız kelimeyi yazın</Text>
+            </View>
+          )}
+          {noResultFoundWarning && (
+  <View style={styles.warningContainer}>
+    <Text style={styles.warningText}>۞ Aradığınız Kelime Bulunamadı </Text>
+  </View>
+)}
+
+
+
             
-          <View style={{height:'auto'}}>
+          <View style={{height:'auto', padding: 2}}>
 
           {matchingVerses.length > 0 && 
           <>
        
 
           <Text style={{fontWeight: "bold", fontSize:18}}>
-           Bulunan Dua Sayısı: {matchingVerses.length}
+           Bulunan Dua Sayısı: {matchingVerses.length}{'\n'}
           </Text>
           </>
            } 
@@ -198,7 +217,7 @@ const Home = () => {
               <Text style={styles.verseText}>
               <Text style={{fontWeight: "bold"}}>Meali       :</Text> {verse.translation.text}
               </Text>
-              <Text style={styles.verseText}>({verse.surah_name} {verse.surah_id}/ {verse.verse_number})</Text>
+              <Text style={{fontWeight: "bold",fontSize: 15, marginTop: 3,}}>({verse.surah_name} {verse.surah_id}/ {verse.verse_number})</Text>
 
              <TouchableOpacity
              
@@ -206,7 +225,15 @@ const Home = () => {
             style={styles.shareButtonContainer}
               >
                 <View style={styles.shareButton}>
+                <View style={styles.shareButtonContent}>
+
+                <Image 
+                  source={shareIcon}
+                  style={{width: 20, height: 20}} 
+                  
+                /> 
                 <Text style={styles.shareButtonText}>GÖNDER</Text>
+                </View>
                 </View>
               </TouchableOpacity>
 
@@ -288,11 +315,15 @@ const styles = StyleSheet.create({
     
   },
 
-  
+  warningText: {
+    fontSize: 15,
+    
+  },
 
+  
   shareButtonContainer: {
     alignItems: 'flex-start',
-    margin: 3,
+    marginBottom: 5,
   },
 
   shareButton: {
@@ -310,6 +341,10 @@ const styles = StyleSheet.create({
     color: 'orange',
     fontWeight: 'bold',
     alignSelf: 'flex-start' ,
+    },
+    shareButtonContent: {
+      flexDirection: 'row',
+      alignItems: 'center',
     },
 
   verseContainer: {
@@ -330,7 +365,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#208796',
     borderRadius: 10,
     padding: 5,
-    margin: 5,
+    marginBottom: 5,
     borderColor: 'black',
     alignItems: 'center',
     

@@ -394,9 +394,9 @@ export const dataWithMeaning =
         },
         {
             "id": 6253,
-            "surah_id": "/ Ebû Davud,Salât, 122;Tirmizi, Salât",
-            "surah_name": "Sübhâneke Duası",
-            "verse_number": 179,
+            "surah_id": "/ Sübhâneke Duası",
+            "surah_name": "Namaz Duaları-1",
+            "verse_number": "Ebû Davud,Tirmizi, Salât179",
             "verse": "مَحّمًَدَ اعبُدُهَُ وأَيكَ للَّهُ َوَحدُهَالشرِّاللّهِ إِلَّانَالإِنّاَالإِشْهُد أأَنَاللّهُ واجعَلْنِي مِنَالَتُّوَّابِنَواجَعَلنِي مِنَالْمُتَطَهِّرِي مِنَالذَّنُوبِواجعَلنِي مِنْ عِبَادِكَالصَّالِحِينَوبإسْتِغْفَرَكَوأنتَأَرْحَمُالرَّاحِمِينَ",                      
             "page": 605,
             "juzNumber": 3,
@@ -413,31 +413,8 @@ export const dataWithMeaning =
             "footnotes": null
             },
             "surah_audio": "",
-            "meaning": "Namaz, Sübhâneke, sübhaneke"
+            "meaning": "Namaz, Sübhâneke, sübhaneke, subhaneke"
         },   
-        {
-            "id": 6254,
-            "surah_id": "/ Ebû Davud,Salât, 122;Tirmizi, Salât",
-            "surah_name": "Sübhâneke Duası",
-            "verse_number": 179,
-            "verse": "مَحّمًَدَ اعبُدُهَُ وأَيكَ للَّهُ َوَحدُهَالشرِّاللّهِ إِلَّانَالإِنّاَالإِشْهُد أأَنَاللّهُ واجعَلْنِي مِنَالَتُّوَّابِنَواجَعَلنِي مِنَالْمُتَطَهِّرِي مِنَالذَّنُوبِواجعَلنِي مِنْ عِبَادِكَالصَّالِحِينَوبإسْتِغْفَرَكَوأنتَأَرْحَمُالرَّاحِمِينَ",                      
-            "page": 605,
-            "juzNumber": 3,
-            "transcription": "Sübhanekellâhümme ve bi hamdik ve tebâra-kesmük. Ve te’alâ ceddük ve celle senâük. Ve lâ ilâhe ğayrük.",
-            "translation": {
-            "id": 999999,
-            "author": {
-                "id": 8,
-                "name": "Bayraktar Bayraklı",
-                "description": "Yeni Bir Anlayışın Işığında Kur'an Meali",
-                "language": "tr"
-            },
-            "text": "Allah’ım! Sen eksik sıfatlardan pak ve uzaksın. Seni daima böyle tenzih eder ve överim. Senin adın mübarektir. Varlığın her şeyden üstündür, şanın yücedir. Senden başka tanrı yoktur.",
-            "footnotes": null
-            },
-            "surah_audio": "",
-            "meaning": "Cenaze, Sübhâneke, sübhaneke"
-        },
         {
             "id": 2,
             "surah_id": 1,
@@ -463,9 +440,9 @@ export const dataWithMeaning =
         },
         {
             "id": 6255,
-            "surah_id": "/ Ebû Davud,Salât, 154;Tirmizi, Salât",
-            "surah_name": "Rükûda Okunacak Dua",
-            "verse_number": 194,
+            "surah_id": "/ Rükûda Okunacak Dua ",
+            "surah_name": "Namaz Duaları-2",
+            "verse_number": "Ebû Davud,Tirmizi, Salât,194",
             "verse": "ْ َع ِظيمَ الُسْبَحَانَ رِّبِي",                      
             "page": 605,
             "juzNumber": 3,
@@ -486,9 +463,9 @@ export const dataWithMeaning =
         },
         {
             "id": 6256,
-            "surah_id": "/ Ebû Davud,Salât, 154;Tirmizi, Salât",
-            "surah_name": "Secde Ederken Okunacak Dua",
-            "verse_number": 194,
+            "surah_id": "/ Secde Ederken Okunacak Dua",
+            "surah_name": "Namaz Duaları-3",
+            "verse_number": "Ebû Davud,Tirmizi, Salât,194" ,
             "verse": "ٰىْعلأْ َالُ سْبَحَانَ رِّبِي",                      
             "page": 605,
             "juzNumber": 3,
@@ -509,9 +486,9 @@ export const dataWithMeaning =
         },
         {
             "id": 6257,
-            "surah_id": "/ Ebû Davud,Salât, 182. I",
-            "surah_name": "Namazada Otururken Okunacak Dua, Tahıyyât (Ettehıyyâtü)",
-            "verse_number": 591,
+            "surah_id": "/ Namazada Otururken Okunacak Dua, Tahıyyât (Ettehıyyâtü) ",
+            "surah_name": "Namaz Duaları-4",
+            "verse_number": "Ebû Davud,Salât, 182. I591",
             "verse": "ٰىْعلأْ َالُ سْبَحَانَ رِّبِي",                      
             "page": 605,
             "juzNumber": 3,
@@ -532,9 +509,9 @@ export const dataWithMeaning =
         },
         {
             "id": 6258,
-            "surah_id": "/ Ebû Davud,Salât, 182. I",
-            "surah_name": "Salli Duası",
-            "verse_number": 591,
+            "surah_id": "/ Salli Duası ",
+            "surah_name": "Namaz Duaları-5",
+            "verse_number": "Ebû Davud,Salât, I, 591",
             "verse": "ٰىْعلأْ َالُ سْبَحَانَ رِّبِي",                      
             "page": 605,
             "juzNumber": 3,
@@ -551,13 +528,13 @@ export const dataWithMeaning =
             "footnotes": null
             },
             "surah_audio": "",
-            "meaning": "Namaz, Salli, Allâhümme salli, Allâhümmesalli, Allahümme sallim, Allhhümmesalim, Allahummesalli"
+            "meaning": "Namaz, Salli, Allâhümme salli, Allâhümmesalli, Allahümme sallim, Allhhümmesalim, Allahummesalli, salavat"
         },
         {
             "id": 6259,
-            "surah_id": "/ Ebû Davud,Salât, 182. I",
-            "surah_name": "Bârik Duası",
-            "verse_number": 591,
+            "surah_id": "/ Bârik Duası",
+            "surah_name": "Namaz Duaları-6",
+            "verse_number": "Ebû Davud,Salât,I 591",
             "verse": "ٰىْعلأْ َالُ سْبَحَانَ رِّبِي",                      
             "page": 605,
             "juzNumber": 3,
@@ -574,7 +551,7 @@ export const dataWithMeaning =
             "footnotes": null
             },
             "surah_audio": "",
-            "meaning": "Namaz, Allâhümme bârik, Bârik, Barik,Allâhümme bârik, Allâhümmebârik, Allahummebarik, Allahümmebarik"
+            "meaning": "Namaz, Allâhümme bârik, Bârik, Barik,Allâhümme bârik, Allâhümmebârik, Allahummebarik, Allahümmebarik, Salavat"
         },
         {
             "id": 208,
@@ -584,7 +561,7 @@ export const dataWithMeaning =
             "verse": "وِمِنْهُم مَّن يَقُولُ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
             "page": 30,
             "juzNumber": 2,
-            "transcription": "Ve minhum men yekulu rabbena atina fid dunya haseneten ve fil ahirati haseneten ve kına azaben nar.",
+            "transcription": "Rabbenâ âtinâ fid-dünyâ haseneten ve fi’lâhirati haseneten ve kınâ ‘azâbe’n-nâr.Rabbenağfirlî ve li vâlideyye ve lil-mü’minîne yevme yekûmü’l-hısâb.",
             "translation": {
               "id": 3522,
               "author": {
@@ -646,33 +623,10 @@ export const dataWithMeaning =
             "meaning": "Namaz, Kunût, Kunut"
         },
         {
-            "id": 6261,
-            "surah_id": "/ Hâkim, Dua, I",
-            "surah_name": " Selâmdan Sonra Okunacak Dua",
-            "verse_number": 511,
-            "verse": "َ ْيِهْ َقّيُ ُومَ وَاَ ُتُوبُ اِلَّ الْحي اَ ُ هَو الَٰه اِّلِذ اَي ل اِلَّعِظَيم الاَسْتَغْفِرُ اللهَٰ ال",                      
-            "page": 605,
-            "juzNumber": 3,
-            "transcription": "Esteğfirullâhe’l-āzîmellezî lâ ilâhe illâ hüvel-hayyül-kayyûmü ve etûbü ileyhi.",
-            "translation": {
-            "id": 999999,
-            "author": {
-                "id": 8,
-                "name": "Bayraktar Bayraklı",
-                "description": "Yeni Bir Anlayışın Işığında Kur'an Meali",
-                "language": "tr"
-            },
-            "text": "Ulu Allah’tan bağışlanmamı dilerim ki O’ndan başka ilâh yoktur. O, diridir ve kayyumdur. O’na tövbe ederim.",
-            "footnotes": null
-            },
-            "surah_audio": "",
-            "meaning": "Namaz, Selâm, Günah, Gunah, Af, Günah Affı, Tevbe, Tövbe, Arinmak, Arınmak"
-        },
-        {
             "id": 6262,
-            "surah_id": "/ Müslim, Mesâcid, 135; Tirmizî, Salât, 224; Ebû Dâvud, Salât",
-            "surah_name": " Selâmdan Sonra Okunacak Dua",
-            "verse_number": 360,
+            "surah_id": "/ Selâmdan Sonra Okunacak Dua",
+            "surah_name": "Namaz Duaları-7 ",
+            "verse_number": "Müslim, Mesâcid,Tirmizî,Ebû Dâvud, Salât, 360",
             "verse": "ِ ِ ْكَرامْ َجلاَِل َ وإْالْنَتّ السَلاَُمَ وِمْنَكَ السَلاَُمَ تَبَارَكَتَ يَ اَذَا الْلهُ اُهّمّٰ الل",                      
             "page": 605,
             "juzNumber": 3,
@@ -2002,7 +1956,7 @@ export const dataWithMeaning =
                     "footnotes": null
                     },
                     "surah_audio": "",
-                    "meaning": "Helâl, Helal, Rizik, Rızık, Kazanç, Bereket"
+                    "meaning": "Helâl, Helal, Rizik, Rızık, Kazanç, Bereket, Şans, Talih"
                 },
                 {
                     "id": 6304,
@@ -2025,7 +1979,7 @@ export const dataWithMeaning =
                     "footnotes": null
                     },
                     "surah_audio": "",
-                    "meaning": "Helâl, Helal, Rizik, Rızık, Kazanç, Bereket"
+                    "meaning": "Helâl, Helal, Rizik, Rızık, Kazanç, Bereket, Ticaret, Şans, Talih"
                 },
                 {
                     "id": 6305,
@@ -3061,7 +3015,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Borç, Geçim, Sıkıntı, Para, Geçim Sıkıntısı"
+                            "meaning": "Borç, Geçim, Sıkıntı, Para, Geçim Sıkıntısı, Şans, Talih"
                         },
                         {
                             "id": 6341,
@@ -3084,7 +3038,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Borç, Geçim, Sıkıntı, Para, Fakirlik, Geçim Sıkıntısı"
+                            "meaning": "Borç, Geçim, Sıkıntı, Para, Fakirlik, Geçim Sıkıntısı, Şans, Talih"
                         },
                         {
                             "id": 6342,
@@ -3107,7 +3061,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Borç, Geçim, Sıkıntı, Para, Fakirlik, Zenginlik, Açlık, Geçim Sıkıntısı"
+                            "meaning": "Borç, Geçim, Sıkıntı, Para, Fakirlik, Zenginlik, Açlık, Geçim Sıkıntısı, Şans, Talih"
                         },
                         {
                             "id": 6343,
@@ -3130,7 +3084,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Borç, Geçim, Sıkıntı, Para, Fakirlik, Zenginlik, Açlık, Geçim Sıkıntısı"
+                            "meaning": "Borç, Geçim, Sıkıntı, Para, Fakirlik, Zenginlik, Açlık, Geçim Sıkıntısı, Şans, Talih"
                         },
                         {
                             "id": 11,
@@ -4509,7 +4463,7 @@ export const dataWithMeaning =
                             "description": "Yeni Bir Anlayışın Işığında Kur'an Meali",
                             "language": "tr"
                           },
-                          "text": "Dedi ki: \"Ey kavmim! Eğer benim, Rabbim tarafından verilmiş apaçık bir delilim varsa ve O bana tarafından güzel bir rızık vermişse buna ne dersiniz? Size yasak ettiğim şeylerin aksini yaparak size aykırı davranmak istemiyorum. Ben sadece gücümün yettiği kadar ıslah etmek istiyorum. Fakat başarmam Allah'ın yardımı iledir. Yalnız O'na güvenip dayandım ve bütün benliğimle  O'na yöneldim.\"",
+                          "text": "Ey kavmim! Eğer benim, Rabbim tarafından verilmiş apaçık bir delilim varsa ve O bana tarafından güzel bir rızık vermişse buna ne dersiniz? Size yasak ettiğim şeylerin aksini yaparak size aykırı davranmak istemiyorum. Ben sadece gücümün yettiği kadar ıslah etmek istiyorum. Fakat başarmam Allah'ın yardımı iledir. Yalnız O'na güvenip dayandım ve bütün benliğimle  O'na yöneldim.",
                           "footnotes": null
                         },
                         "surah_audio": "https://archive.org/download/INDIRILIS_SIRASINA_GORE_SESLI_KURAN_MEALI/52-hud.mp3",
@@ -4858,7 +4812,7 @@ export const dataWithMeaning =
                           "footnotes": null
                         },
                         "surah_audio": "https://archive.org/download/INDIRILIS_SIRASINA_GORE_SESLI_KURAN_MEALI/50-isra.mp3",
-                        "meaning": "Helâl, Helal, Rizik, Rızık, Kazanç, Bereket, İsra, Hayır, Muhammed, Af, Güç, Kuvvet"
+                        "meaning": "Helâl, Helal, Rizik, Rızık, Kazanç, Bereket, İsra, Hayır, Muhammed, Af, Güç, Kuvvet, Şans, Talih"
                     },
                     {
                         "id": 752,
@@ -5249,7 +5203,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Bağışlamak, Bağışlanmak, Şükür, Rızık, Rizik "
+                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Bağışlamak, Bağışlanmak, Şükür, Rızık, Rizik, Şans, Talih"
                     },
                     {
                         "id": 6380,
@@ -5548,7 +5502,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Borç, Geçim, Sıkıntı, Geçim Sıkıntısı, Para, Fakirlik, Zenginlik, Açlık"
+                        "meaning": "Borç, Geçim, Sıkıntı, Geçim Sıkıntısı, Para, Fakirlik, Zenginlik, Açlık, Aclik, Şans, Talih"
                     },
                     {
                         "id": 6393,
@@ -5640,7 +5594,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Şükür, Rızık, Rizik "
+                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Şükür, Rızık, Rizik,, Şans, Talih"
                     },
                     {
                         "id": 6397,
@@ -5916,7 +5870,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Günah, Gunah, Af, Günah Affı, Tevbe, Tövbe, Arinmak, Arınmak, Hayır, Şükür, Rızık, Rizik, Uhud, Muhammed, Savaş, Zafer"
+                        "meaning": "Günah, Gunah, Af, Günah Affı, Tevbe, Tövbe, Arinmak, Arınmak, Hayır, Şükür, Rızık, Rizik, Uhud, Muhammed, Savaş, Zafer, Şans, Talih"
                     },
                     {
                         "id": 6409,
@@ -6031,7 +5985,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Helâl, Helal, Rizik, Rızık, Kazanç, Bereket"
+                        "meaning": "Helâl, Helal, Rizik, Rızık, Kazanç, Bereket, Şans, Talih"
                     },
                     {
                         "id": 6414,
@@ -6422,7 +6376,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Borç, Geçim, Sıkıntı, Geçim Sıkıntısı, Para, Fakirlik, Zenginlik, Açlık, Hainlik, Hain"
+                        "meaning": "Borç, Geçim, Sıkıntı, Geçim Sıkıntısı, Para, Fakirlik, Zenginlik, Açlık, Aclik, Şans, Talih"
                     },
                     {
                         "id": 6430,
@@ -6537,7 +6491,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Borç, Geçim, Sıkıntı, Geçim Sıkıntısı, Para, Fakirlik, Zenginlik, Açlık, Hainlik, Hain"
+                        "meaning": "Borç, Geçim, Sıkıntı, Geçim Sıkıntısı, Para, Fakirlik, Zenginlik, Açlık, Aclik, Şans, Talih"
                     },
                     {
                         "id": 6435,
@@ -6606,7 +6560,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Şükür, Rızık, Rizik , Ev, Rahatlık, Bereket, Günah, Gunah, Bağışlamak, Bağışlanmak  "
+                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Şükür, Rızık, Rizik , Ev, Rahatlık, Bereket, Günah, Gunah, Bağışlamak, Bağışlanmak, Şans, Talih"
                     },
                     {
                         "id": 6438,
@@ -6629,9 +6583,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Sabah, Akşam, Gün, Kaza, Bela, Belâ, Zafer, Askerlik, Asker, Savaş, Belâdan Korunma, Yardım, Uyku, Yatak, Uyumadan Önce, Gece, Bereket, Günah, Gunah, Bağışlamak, Bağışlanmak, Borç, Geçim, Sıkıntı, Geçim Sıkıntısı, Para, Fakirlik, Zenginlik, Açlık  "
+                        "meaning": "Sabah, Akşam, Gün, Kaza, Bela, Belâ, Zafer, Askerlik, Asker, Savaş, Belâdan Korunma, Yardım, Uyku, Yatak, Uyumadan Önce, Gece, Bereket, Günah, Gunah, Bağışlamak, Bağışlanmak, Borç, Geçim, Sıkıntı, Geçim Sıkıntısı, Para, Fakirlik, Zenginlik, Açlık, Aclik, Şans, Talih"
                     },
-
- 
-            
+                             
  ]

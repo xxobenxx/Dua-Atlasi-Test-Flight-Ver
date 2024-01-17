@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { set } from 'react-native-clipboard';
+
 
 const Tesbih = () => {
   const [count, setCount] = useState(0);
-  const [resetCounter, setResetCounter] = useState(0);
+  const [resetCounter, setResetCounter] = useState(1);
 
 
   const reset = () => {
-    setCount(1);
+    setCount(0);
+    setResetCounter(1);
+    
   };
 
   const handleTextPress = () => {
@@ -22,16 +24,28 @@ const Tesbih = () => {
 
   const getDisplayText = () => {
     if (count === 34) {
-      return 'N';
+      return '۞';
     }
     return count;f
   };
 
   return (
     <View style={styles.container}>
-      
+
+      <Text>
+
+      <Text style={{ color: 'black', fontSize: 18, fontWeight: 'bold', textAlign: 'center' }}>
+      "Allahu la ilahe illa huvel hayyul kayyum, la te'huzuhu sinetun ve la nevm, lehu ma fis semavati ve ma fil ard, 
+      menzellezi yeşfeu indehu illa bi iznih ya'lemu ma beyne eydihim ve ma halfehum, ve la yuhitune bi şey'in min 
+      ilmihi illa bi ma şae, vesia kursiyyuhus semavati vel ard, ve la yeuduhu hıfzuhuma ve huvel aliyyul azim."
+      </Text>{'\n\n'}
+    
+      <Text style={{ color: 'black', fontSize: 15,  textAlign: 'center' }}>
+      Ayete’l-kürsî (Bakara 2-255)</Text>
+      </Text>
+
       <Text style={{ marginTop: 20, fontSize: 30, fontWeight: 'bold' }}>
-        {resetCounter} TUR</Text>
+        {resetCounter}. TUR</Text>
 
 
       <TouchableOpacity onPress={handleTextPress}>
@@ -56,6 +70,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
+    margin: 3,
   },
   tnum: {
     borderWidth: 5,

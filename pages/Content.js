@@ -8,7 +8,17 @@ const Content = () => {
   const [selectedTranslation, setSelectedTranslation] = useState(null);
 
   const surahNames = [...new Set(dataWithMeaning.map((verse) => verse.surah_name))];
-  surahNames.sort((a, b) => a.localeCompare(b));
+  surahNames.sort((a, b) => {
+    const [aPrefix, aNumber] = a.split('-');
+    const [bPrefix, bNumber] = b.split('-');
+
+    if (aPrefix === bPrefix) {
+      const aNumeric = parseInt(aNumber, 10) || 0;
+      const bNumeric = parseInt(bNumber, 10) || 0;
+      return aNumeric - bNumeric;
+    }
+    return a.localeCompare(b);
+  });
 
   const verses = dataWithMeaning.filter((verse) => verse.surah_name === selectedSurahName);
 
@@ -22,12 +32,18 @@ const Content = () => {
       const resultText = verses
         .map(
           (verse) => (
-            <Text key={verse.id}>
+            <View key={verse.id} style={{ borderBottomWidth: 1, borderBottomColor: '#208796', marginBottom: 6, alignItems:'center'} }>
 
-              <Text style={{ fontWeight: 'bold', fontSize: 18 }}>
+              <Text>
+             <Text style={{ fontWeight: 'bold', fontSize: 25}}>
+                {verse.surah_name}
+              </Text>{'\n'}
+
+              <Text style={{ fontWeight: 'bold', fontSize: 16 }}>
                 {verse.surah_id}
               </Text>
-
+              
+              <Text style={{fontSize: 16 }}>
               {'\n\n'}
               {verse.verse}
 
@@ -36,7 +52,10 @@ const Content = () => {
 
               <Text style={{ fontWeight: 'bold' }}>{'\n\nMeali        : '}</Text>
               {verse.translation.text}
+              </Text>
+
             </Text>
+            </View>  
           )
         )
         .reduce((acc, textElement) => acc.concat(textElement, '\n\n'), []);
@@ -44,7 +63,7 @@ const Content = () => {
       if (resultText.length > 0) {
         setSelectedTranslation(resultText);
       } else {
-        setSelectedTranslation('Listeden Görüntülemek Istediğiniz Duayı Seçin');
+        setSelectedTranslation('۞ Kılavuzdan Okumak İstediğiniz Duayı Seçin');
       }
     } else {
       setSelectedTranslation(null);
@@ -56,17 +75,18 @@ const Content = () => {
       <Picker
         selectedValue={selectedSurahName}
         onValueChange={(value) => handleSurahNameChange(value)}
+        
       >
         <Picker.Item label="DUA KILAVUZU" value={null} />
         {surahNames.map((surahName) => (
-          <Picker.Item key={surahName} label={surahName} value={surahName} />
+          <Picker.Item key={surahName} label={surahName} value={surahName}/>
         ))}
       </Picker>
 
       {selectedSurahName && (
         <ScrollView style={styles.resultsContainer}>
          
-          <Text style={{ fontSize: 18 }}>{selectedTranslation || 'No verses available.'}</Text>
+          <Text style={{ fontSize: 18 }}>{selectedTranslation || 'Lütfen Bir Dua Seçin'}</Text>
         </ScrollView>
       )}
     </View>
@@ -74,9 +94,14 @@ const Content = () => {
 };
 
 const styles = StyleSheet.create({
+  
   resultsContainer: {
-    margin: 8,
-    
+   margin: 3,
+   padding: 3,
+   backgroundColor: '#b8a8b4',
+   borderWidth: 2,
+   borderColor: 'gray', 
+   
   },
 });
 

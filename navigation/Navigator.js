@@ -13,25 +13,26 @@ const TopTabsNavigator = () => {
   return (
     <>
     <StatusBar barStyle="dark-content" />
-    <Tab.Navigator style={{ marginTop: 43 }}
+    <Tab.Navigator 
 
     
-screenOptions={{
-  tabBarActiveTintColor: 'gold',
-  tabBarLabelStyle: {
-    fontSize: 12,
-    flex: 1,
-    textAlign: 'center',
+   screenOptions={{
+
+   tabBarActiveTintColor: 'gold',
+   tabBarLabelStyle: {
+    fontSize: 13,
     alignItems: 'center', 
-  
-  },
+    marginTop: 43, 
+    },
   tabBarStyle: { backgroundColor: 'rgb(22, 93, 49)' },
-  padding: 10,
-}}
+  
+  
+  
+ 
+  }}
+   >
 
-
-    >
-      <Tab.Screen name="ATLAS" component={Home} />
+      <Tab.Screen name="ATLAS" component={Home} /> 
       <Tab.Screen name="KILAVUZ" component={Content} />
       <Tab.Screen name="TESBİH" component={Tesbih} /> 
       <Tab.Screen name="HAKKINDA" component={About} />

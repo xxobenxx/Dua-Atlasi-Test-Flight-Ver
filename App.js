@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import TopTabsNavigator from './navigation/Navigator';
 
 
+
 const App = () => {
   return (
     
@@ -12,20 +13,12 @@ const App = () => {
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       
       <TopTabsNavigator />
-{/* 
-      <ImageBackground source={image}  
-      style={styles.bckgrndImage}></ImageBackground> */}
+
 
     </NavigationContainer>
   );
 };
 
-// const styles = StyleSheet.create({
-// bckgrndImage: {
-//   flex: 1,
-//   justifyContent: 'center',
-//   resizeMode: 'auto', 
-// }, 
-// });
+
 
 export default App;
