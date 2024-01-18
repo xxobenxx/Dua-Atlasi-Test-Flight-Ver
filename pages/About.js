@@ -40,13 +40,12 @@ const styles = StyleSheet.create({
   about: {
     flex: 1,
     padding: 10,
+    paddingBottom: 20
     },
 
     contact: {
       alignItems: 'flex-start',
       textAlign: 'left',  
-      
-      
       },
 
     logoContainer: {
@@ -56,7 +55,7 @@ const styles = StyleSheet.create({
 
       logo: {
         width: 'auto',
-        height: '80%',
+        height: '90%',
       },
 
   }
