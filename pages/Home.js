@@ -257,7 +257,7 @@ const Home = () => {
              sound.stopAsync();
              setSound(null);
            }}>
-              <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'red', }}>DURDUR</Text>
+              <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#102844', }}>DURDUR</Text>
              </TouchableOpacity>
            )}
 

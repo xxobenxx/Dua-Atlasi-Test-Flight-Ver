@@ -17,12 +17,12 @@ const About = () => {
       </View>
 
       <View style={styles.contact}>
-      <Text>Kaynak: DUALAR - Diyanet İşleri Başkanlığı Yayınları: 671. 8. Baskı, 2019 Ankara {'\n'} </Text>    
-
-
+         
       <Text style={{fontWeight: "bold"}}>©  El Bueno Services 2023. </Text>
       <Text style={{fontWeight: "bold"}}>@: kerken[at]gmail </Text>
-      <Text style={{fontWeight: "bold"}}>L : 08019 Barcelona</Text>
+      <Text style={{fontWeight: "bold"}}>L : 08019 Barcelona{'\n'}</Text>
+
+      <Text style={{fontSize: 11}}>Kaynak: DUALAR - Diyanet İşleri Başkanlığı Yayınları: 671. 8. Baskı, 2019 Ankara </Text> 
       </View>
 
 

@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 
 const Tesbih = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState('۞');
   const [resetCounter, setResetCounter] = useState(1);
 
 
