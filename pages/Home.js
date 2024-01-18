@@ -213,7 +213,7 @@ const Home = () => {
 
             
               
-            <View style={styles.verseContainer}>
+            <View key={verse.id} style={styles.verseContainer}>
               
               <Text style={styles.verseText} > 
               <Text style={{fontWeight: "bold"}}>{verse.verse}</Text> 
@@ -293,7 +293,7 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    margin: 5,
+    margin: 3,
     backgroundColor: 'transparent'
   },
 
@@ -304,7 +304,8 @@ const styles = StyleSheet.create({
 
   logo: {
     width: 'auto',
-    height: 45
+    height: 45,
+   
   
  
   },
