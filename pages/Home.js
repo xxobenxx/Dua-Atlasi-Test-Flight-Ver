@@ -13,6 +13,7 @@ import { SearchBar } from 'react-native-elements';
 import { Audio } from 'expo-av';
 import {dataWithMeaning} from '../data/data_with_meaning';
 import shareIcon from '../assets/shareIcon.png';
+import logoHorizontal3 from '../assets/logoHorizontal3.png';
 
 
 
@@ -108,10 +109,10 @@ const Home = () => {
 
   const onShare = async (verse) => {
     
-    const translationText = verse.translation ? verse.translation.text : 'Translation not available';
+    const translationText = verse.translation ? verse.translation.text : 'Sonuç Bulunamadı';
     const audioMessage = verse.surah_audio ? `\nDinle: ${verse.surah_audio}` : '';
 
-    const shareMessage = `۞${verse.surah_name}۞\n\n\n•${verse.verse}•\n\nOkunuşu: ${verse.transcription}\n\nMeali       : ${translationText}${audioMessage}\n\n\n\n DUA ATLASI`;
+    const shareMessage = `۞${verse.surah_name}۞\n\n\n•${verse.verse}•\n\nOkunuşu: ${verse.transcription}\n\nMeali       : ${translationText}${audioMessage}\n\n\n\n DUA ATLASI APP. `;
   
   
     try {
@@ -144,8 +145,14 @@ const Home = () => {
       <View style={styles.container}>
 
       
+      <View style={styles.logoContainer}>
 
-      <Text style={styles.header}>DUA ATLASI</Text>
+      <Image 
+        source={logoHorizontal3}
+        style={styles.logo}
+      />
+      
+      </View>
      
       <SearchBar
           
@@ -176,15 +183,15 @@ const Home = () => {
           
         <ScrollView style={styles.resultsContainer}
           >
-            {showPleaseTypeWarning && (
+           {showPleaseTypeWarning && (
             <View style={styles.warningContainer}>
               <Text style={styles.warningText}>⚠️ Lütfen aradığınız kelimeyi yazın</Text>
             </View>
           )}
           {noResultFoundWarning && (
-  <View style={styles.warningContainer}>
-    <Text style={styles.warningText}>۞ Aradığınız Kelime Bulunamadı </Text>
-  </View>
+            <View style={styles.warningContainer}>
+              <Text style={styles.warningText}>۞ Aradığınız Kelime Bulunamadı </Text>
+            </View>
 )}
 
 
@@ -229,10 +236,10 @@ const Home = () => {
 
                 <Image 
                   source={shareIcon}
-                  style={{width: 20, height: 20}} 
+                  style={{width: 20, height: 20, marginRight:2}} 
                   
                 /> 
-                <Text style={styles.shareButtonText}>GÖNDER</Text>
+                <Text style={styles.shareButtonText}>PAYLAŞ</Text>
                 </View>
                 </View>
               </TouchableOpacity>
@@ -290,6 +297,18 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
 
+  logoContainer: {
+    justifyContent: 'center',
+    margin: 10,
+  },
+
+  logo: {
+    width: 'auto',
+    height: 45
+  
+ 
+  },
+
   searchButton: {
     marginLeft: -5,
     borderWidth: 1,
@@ -330,7 +349,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'black',
     borderRadius: 10,
-    padding: 5,
+    padding: 4,
     marginTop: 5,
     backgroundColor: '#102844',
 

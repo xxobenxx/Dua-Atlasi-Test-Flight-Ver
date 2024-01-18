@@ -27,6 +27,8 @@ const Content = () => {
     console.log('Selected Surah Name:', value);
   };
 
+ 
+
   React.useEffect(() => {
     if (selectedSurahName) {
       const resultText = verses
@@ -60,38 +62,41 @@ const Content = () => {
         )
         .reduce((acc, textElement) => acc.concat(textElement, '\n\n'), []);
 
-      if (resultText.length > 0) {
-        setSelectedTranslation(resultText);
-      } else {
-        setSelectedTranslation('۞ Kılavuzdan Okumak İstediğiniz Duayı Seçin');
-      }
-    } else {
-      setSelectedTranslation(null);
-    }
-  }, [selectedSurahName]);
+              
 
-  return (
-    <View>
-      <Picker
-        selectedValue={selectedSurahName}
-        onValueChange={(value) => handleSurahNameChange(value)}
+            if (resultText.length > 0) {
+              setSelectedTranslation(resultText);
+            } else {
+              setSelectedTranslation(`۞ Kılavuzda toplam ${surahNames.length} dua bulundu.`);
+            }
+          } else {
+            setSelectedTranslation(null);
+          }
+        }, [selectedSurahName]);
         
-      >
-        <Picker.Item label="DUA KILAVUZU" value={null} />
-        {surahNames.map((surahName) => (
-          <Picker.Item key={surahName} label={surahName} value={surahName}/>
-        ))}
-      </Picker>
 
-      {selectedSurahName && (
-        <ScrollView style={styles.resultsContainer}>
-         
-          <Text style={{ fontSize: 18 }}>{selectedTranslation || 'Lütfen Bir Dua Seçin'}</Text>
-        </ScrollView>
-      )}
-    </View>
-  );
-};
+          return (
+            <View>
+              <Picker
+                selectedValue={selectedSurahName}
+                onValueChange={(value) => handleSurahNameChange(value)}
+                
+              >
+                <Picker.Item label="DUA KILAVUZU" value={null} />
+                {surahNames.map((surahName) => (
+                  <Picker.Item key={surahName} label={surahName} value={surahName}/>
+                ))}
+              </Picker>
+
+              {selectedSurahName && (
+                <ScrollView style={styles.resultsContainer}>
+                
+                  <Text style={{ fontSize: 18 }}>{selectedTranslation || 'Lütfen Bir Dua Seçin'}</Text>
+                </ScrollView>
+              )}
+            </View>
+          );
+        };
 
 const styles = StyleSheet.create({
   

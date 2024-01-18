@@ -1,47 +1,63 @@
 import React from 'react';
-import {Text, View, StyleSheet, SafeAreaView} from 'react-native';
-
+import {Text, View, StyleSheet, SafeAreaView, Image} from 'react-native';
+import logo from '../assets/splash2.png';
 
 const About = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ flex: 1 }}>
 
     
-      <View style={styles.aboutText}>
-<Text>Kaynak: DUALAR - Diyanet İşleri Başkanlığı Yayınları: 671. 8. Baskı, 2019 Ankara  </Text>      
+      <View style={styles.about}>
 
-<View style={styles.contact}></View>
-<Text>© El Turco Services 2023. </Text>
-<Text>@: kerken[at]gmail </Text>
-<Text>L : 08019 Barcelona</Text>
+      <View style={styles.logoContainer}>
+      <Image 
+        source={logo}
+        style={styles.logo}
+      />
+      </View>
+
+      <View style={styles.contact}>
+      <Text>Kaynak: DUALAR - Diyanet İşleri Başkanlığı Yayınları: 671. 8. Baskı, 2019 Ankara {'\n'} </Text>    
 
 
-</View>
-    
-    </SafeAreaView>
-  );
-};
+      <Text style={{fontWeight: "bold"}}>©  El Bueno Services 2023. </Text>
+      <Text style={{fontWeight: "bold"}}>@: kerken[at]gmail </Text>
+      <Text style={{fontWeight: "bold"}}>L : 08019 Barcelona</Text>
+      </View>
+
+
+
+      </View>
+          
+          </SafeAreaView>
+        );
+      };
 
 
 const styles = StyleSheet.create({
 
   
-  aboutText: {
-    alignItems: 'left',
+  about: {
+    flex: 1,
     padding: 10,
-    flexDirection: 'column',
-    textAlign: 'left',
-    
     },
 
     contact: {
-      alignItems: 'flex-end',
-      padding: 10,
-      textAlign: 'left',
+      alignItems: 'flex-start',
+      textAlign: 'left',  
+      
       
       },
 
+    logoContainer: {
+        justifyContent: 'flex-start',
+        
+      },
 
+      logo: {
+        width: 'auto',
+        height: '80%',
+      },
 
   }
 );
