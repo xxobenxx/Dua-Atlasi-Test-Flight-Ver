@@ -20,7 +20,7 @@ const About = () => {
          
       <Text style={{fontWeight: "bold"}}>©  El Bueno Services 2023. </Text>
       <Text style={{fontWeight: "bold"}}>L : 08019 Barcelona</Text>
-      <Text style={{fontWeight: "bold"}}>C: kerken@gmail </Text>
+      <Text style={{fontWeight: "bold"}}>C:  duaatlasi@gmail </Text>
       
 
       <Text style={{fontSize: 11}}>Kaynak: DUALAR - Diyanet İşleri Başkanlığı Yayınları: 671. 8. Baskı, 2019 Ankara </Text> 

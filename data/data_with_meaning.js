@@ -1564,7 +1564,7 @@ export const dataWithMeaning =
                 "footnotes": null
                 },
                 "surah_audio": "",
-                "meaning": "Sabah, Uykudan Uyanınca, Uykudan Kalkınca, Uyanınca, Afiyet, Sağlık, Sağlik "
+                "meaning": "Sabah, Uykudan Uyanınca, Uykudan Kalkınca, Uyanınca, Afiyet, Sağlık, Sağlik, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
             },
             {
                 "id": 6290,
@@ -1956,7 +1956,7 @@ export const dataWithMeaning =
                     "footnotes": null
                     },
                     "surah_audio": "",
-                    "meaning": "Helâl, Helal, Rizik, Rızık, Kazanç, Bereket, Şans, Talih"
+                    "meaning": "Helâl, Helal, Rizik, Rızık, Kazanç, Bereket, Şans, Talih, Para, Borç, "
                 },
                 {
                     "id": 6304,
@@ -2002,7 +2002,7 @@ export const dataWithMeaning =
                     "footnotes": null
                     },
                     "surah_audio": "",
-                    "meaning": "Sağlık, Saglik, Sağlik, Afiyet "
+                    "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                 },
                 {
                     "id": 6306,
@@ -2025,7 +2025,7 @@ export const dataWithMeaning =
                     "footnotes": null
                     },
                     "surah_audio": "",
-                    "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Acı, Aci "
+                    "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Acı, Aci, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                 },
                 {
                     "id": 6307,
@@ -2785,7 +2785,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Belâ, Bela, Korunmak, Musibet, Deprem, Yılan, Yükseklik, Düşmek, Yangın, Sağlık, Sağlik"
+                            "meaning": "Belâ, Bela, Korunmak, Musibet, Deprem, Yılan, Yükseklik, Düşmek, Yangın, Sağlık, Sağlik, Hasta, Hastane, Ameliyat"
                         },
                         {
                             "id": 6333,
@@ -3521,7 +3521,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi "
+                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                         },
                         {
                             "id": 6355,
@@ -3544,7 +3544,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi "
+                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Tedavi, Ameliyat "
                         },
                         {
                             "id": 6356,
@@ -3567,7 +3567,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi "
+                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat "
                         },
                         {
                             "id": 6357,
@@ -3590,7 +3590,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi "
+                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat, Tedavi "
                         },
                         {
                             "id": 6358,
@@ -3613,7 +3613,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi "
+                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi, HAstane, Ameliyat "
                         },
                         {
                             "id": 6359,
@@ -3636,7 +3636,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi "
+                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat "
                         },
                         {
                             "id": 6360,
@@ -3659,7 +3659,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi "
+                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat "
                         },
                         {
                             "id": 6361,
@@ -3682,7 +3682,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi "
+                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat "
                         },
                         {
                             "id": 6362,
@@ -3705,7 +3705,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi "
+                            "meaning": "Sağlık, Saglik, Sağlik, Afiyet, Şifa, Hastalık, Hasta, Hastalik, Tedavi, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                         },
                         {
                             "id": 2109,
@@ -5180,7 +5180,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Bağışlamak, Bağışlanmak, Şükür, Rızık, Rizik "
+                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Bağışlamak, Bağışlanmak, Şükür, Rızık, Rizik, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                     },
                     {
                         "id": 6379,
@@ -5222,11 +5222,11 @@ export const dataWithMeaning =
                             "description": "Yeni Bir Anlayışın Işığında Kur'an Meali",
                             "language": "tr"
                         },
-                        "text": "Allah’ım! Bana doğru olanı ilham et ve beni nefsimin şerrinden koru.”",
+                        "text": "Allah’ım! Bana doğru olanı ilham et ve beni nefsimin şerrinden koru.",
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Nefis, Nefs, Günah, Sağlık, Saglik, Sağlik, Afiyet, Bağışlamak, Bağışlanmak, Şükür, Rızık, Rizik "
+                        "meaning": "Nefis, Nefs, Günah, Sağlık, Saglik, Sağlik, Afiyet, Bağışlamak, Bağışlanmak, Şükür, Rızık, Rizik, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                     },
                     {
                         "id": 6381,
@@ -5249,7 +5249,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Nefis, Nefs, Günah, Sağlık, Saglik, Sağlik, Afiyet, Bağışlamak, Bağışlanmak, Şükür, Rızık, Rizik "
+                        "meaning": "Nefis, Nefs, Günah, Sağlık, Saglik, Sağlik, Afiyet, Bağışlamak, Bağışlanmak, Şükür, Rızık, Rizik, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                     },
                     {
                         "id": 6382,
@@ -5318,7 +5318,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Nefis, Nefs, Günah, Sağlık, Saglik, Sağlik, Afiyet, Bağışlamak, Bağışlanmak, Şükür, Ahlâk, Ahlak; Hayır"
+                        "meaning": "Nefis, Nefs, Günah, Sağlık, Saglik, Sağlik, Afiyet, Bağışlamak, Bağışlanmak, Şükür, Ahlâk, Ahlak; Hayır, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                     },
                     {
                         "id": 6385,
@@ -5456,7 +5456,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Salim, Günah, Sağlık, Saglik, Sağlik, Afiyet, Bağışlamak, Bağışlanmak, Şükür, Rızık, Rizik "
+                        "meaning": "Salim, Günah, Sağlık, Saglik, Sağlik, Afiyet, Bağışlamak, Bağışlanmak, Şükür, Rızık, Rizik, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                     },
                     {
                         "id": 6391,
@@ -5548,7 +5548,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Şükür, Rızık, Rizik "
+                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Şükür, Rızık, Rizik, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                     },
                     {
                         "id": 6395,
@@ -5594,7 +5594,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Şükür, Rızık, Rizik,, Şans, Talih"
+                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Şükür, Rızık, Rizik,, Şans, Talih, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                     },
                     {
                         "id": 6397,
@@ -5778,7 +5778,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Şükür, Rızık, Rizik "
+                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Şükür, Rızık, Rizik, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                     },
                     {
                         "id": 6405,
@@ -5801,7 +5801,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Şükür, Rızık, Rizik "
+                        "meaning": " Sağlık, Saglik, Sağlik, Afiyet, Hayır, Şükür, Rızık, Rizik, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                     },
                     {
                         "id": 6406,
@@ -6284,7 +6284,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Hayır, Şükür, Rızık, Rizik, Kötülük, Ferahlik, Sağlık, Sağlik"
+                        "meaning": "Hayır, Şükür, Rızık, Rizik, Kötülük, Ferahlik, Sağlık, Sağlik, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                     },
                     {
                         "id": 6426,
@@ -6537,7 +6537,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Hayır, Kaza, Bela, Sağlık, Sağlik, Düşmek, Yükseklik, Boğulmak, Ölüm, Zehir, Yılan, Akrep, Sokmak"
+                        "meaning": "Hayır, Kaza, Bela, Sağlık, Sağlik, Düşmek, Yükseklik, Boğulmak, Ölüm, Zehir, Yılan, Akrep, Sokmak, Hastalık, Hasta, Hastalik, Tedavi, Hastane, Ameliyat"
                     },
                     {
                         "id": 6437,
