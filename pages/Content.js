@@ -67,7 +67,7 @@ const Content = () => {
             if (resultText.length > 0) {
               setSelectedTranslation(resultText);
             } else {
-              setSelectedTranslation(`۞ Kılavuzda toplam ${surahNames.length} dua bulundu.`);
+              setSelectedTranslation(`۞ Toplam dua sayısı ${surahNames.length} .`);
             }
           } else {
             setSelectedTranslation(null);

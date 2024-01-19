@@ -304,7 +304,7 @@ const styles = StyleSheet.create({
 
   logo: {
     width: 'auto',
-    height: 45,
+    height: 46,
    
   
  
