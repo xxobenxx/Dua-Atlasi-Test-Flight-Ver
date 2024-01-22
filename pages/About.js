@@ -18,7 +18,7 @@ const About = () => {
 
       <View style={styles.contact}>
          
-      <Text style={{fontWeight: "bold"}}>©  El Bueno Services 2023. </Text>
+      <Text style={{fontWeight: "bold"}}>©  El Bueno Digital Services 2023. </Text>
       <Text style={{fontWeight: "bold"}}>L : 08019 Barcelona</Text>
       <Text style={{fontWeight: "bold"}}>C:  duaatlasi@gmail </Text>
       

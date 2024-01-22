@@ -19,6 +19,7 @@ import logoHorizontal3 from '../assets/logoHorizontal3.png';
 
 
 
+
 const Home = () => {
   const [searchText, setSearchText] = useState('');
   const [matchingVerses, setMatchingVerses] = useState([]);
@@ -181,8 +182,7 @@ const Home = () => {
           />
       
       {matchingVerses.length > 0 && 
-        <ScrollView style={styles.resultsContainer}
-          >
+        <ScrollView style={styles.resultsContainer}>
            {showPleaseTypeWarning && (
             <View style={styles.warningContainer}>
               <Text style={styles.warningText}>⚠️ Lütfen aradığınız kelimeyi yazın</Text>
@@ -266,8 +266,7 @@ const Home = () => {
            
           ))}
            </View>
-        </ScrollView>
-        }
+        </ScrollView>}
       </View>
     </SafeAreaView>
   );
