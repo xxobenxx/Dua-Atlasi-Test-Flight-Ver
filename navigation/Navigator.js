@@ -20,9 +20,10 @@
 
               tabBarActiveTintColor: 'gold',
               tabBarLabelStyle: {
-                fontSize: 13,
-                alignItems: 'center', 
+                fontSize: 12.5,
+               justifyContent: 'space-evenly',
                 marginTop: 43, 
+                fontWeight: 'bold',
                 },
               tabBarStyle: { 
                 backgroundColor: 'rgb(22, 93, 49)',

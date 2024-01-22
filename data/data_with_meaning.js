@@ -2739,7 +2739,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Belâ, Bela, Korunmak, Musibet, Deprem, Yılan, Yükseklik, Düşmek, Yangın"
+                            "meaning": "Belâ, Bela, Korunmak, Musibet, Deprem, Yılan, Yükseklik, Düşmek, Yangın, Zelzele"
                         },
                         {
                             "id": 6331,
@@ -2762,7 +2762,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Belâ, Bela, Korunmak, Musibet, Deprem, Yılan, Yükseklik, Düşmek, Yangın"
+                            "meaning": "Belâ, Bela, Korunmak, Musibet, Deprem, Yılan, Yükseklik, Düşmek, Yangın, Zelzele"
                         },
                         {
                             "id": 6332,
@@ -2785,7 +2785,7 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Belâ, Bela, Korunmak, Musibet, Deprem, Yılan, Yükseklik, Düşmek, Yangın, Sağlık, Sağlik, Hasta, Hastane, Ameliyat"
+                            "meaning": "Belâ, Bela, Korunmak, Musibet, Deprem, Yılan, Yükseklik, Düşmek, Yangın, Sağlık, Sağlik, Hasta, Hastane, Ameliyat, Zelzele"
                         },
                         {
                             "id": 6333,
@@ -6399,7 +6399,7 @@ export const dataWithMeaning =
                         "footnotes": null
                         },
                         "surah_audio": "",
-                        "meaning": "Doğal Afet, Doğa, Afet, Sel, Fırtına, Tufan, Deprem, Tayfun "
+                        "meaning": "Doğal Afet, Doğa, Afet, Sel, Fırtına, Tufan, Deprem, Tayfun, Zelzele "
                     },
                     {
                         "id": 6431,

@@ -157,7 +157,7 @@ const Home = () => {
       <SearchBar
           
           margin= {2}
-          containerStyle={{ backgroundColor: '#9e544f', borderRadius: 20, padding: 8 }}
+          containerStyle={{ backgroundColor: '#9e544f', borderRadius: 20, padding: 5 }}
           placeholder="Niçin Dua Edeceksiniz?"
           onChangeText={handleChange}
           value={searchText}
@@ -180,7 +180,7 @@ const Home = () => {
           }
           />
       
-          
+      {matchingVerses.length > 0 && 
         <ScrollView style={styles.resultsContainer}
           >
            {showPleaseTypeWarning && (
@@ -267,6 +267,7 @@ const Home = () => {
           ))}
            </View>
         </ScrollView>
+        }
       </View>
     </SafeAreaView>
   );
@@ -304,7 +305,7 @@ const styles = StyleSheet.create({
 
   logo: {
     width: 'auto',
-    height: 46,
+    height: 44,
    
   
  
