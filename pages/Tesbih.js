@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 
 
 const Tesbih = () => {
@@ -30,21 +30,25 @@ const Tesbih = () => {
   };
 
   return (
-    <View style={styles.container}>
+  <SafeAreaView style={{ backgroundColor: 'transparent', flex: 1 }}>
+      
+  <View style={styles.container}>
 
-      <Text>
+      <Text style={{ margin:5}} >
 
-      <Text style={{ color: 'black', fontSize: 18, fontWeight: 'bold', textAlign: 'center' }}>
+      <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', textAlign: 'center' }}>
       "Allahu la ilahe illa huvel hayyul kayyum, la te'huzuhu sinetun ve la nevm, lehu ma fis semavati ve ma fil ard, 
       menzellezi yeşfeu indehu illa bi iznih ya'lemu ma beyne eydihim ve ma halfehum, ve la yuhitune bi şey'in min 
       ilmihi illa bi ma şae, vesia kursiyyuhus semavati vel ard, ve la yeuduhu hıfzuhuma ve huvel aliyyul azim."
-      </Text>{'\n\n'}
+      </Text>{'\n'}
     
       <Text style={{ color: 'black', fontSize: 15,  textAlign: 'center' }}>
       Ayete’l-kürsî (Bakara 2-255)</Text>
+
       </Text>
 
-      <Text style={{ marginTop: 20, fontSize: 30, fontWeight: 'bold' }}>
+    <View style={styles.counter}>
+      <Text style={{ fontSize: 30, fontWeight: 'bold' }}>
         {resetCounter}. TUR</Text>
 
 
@@ -60,7 +64,10 @@ const Tesbih = () => {
           <Text style={{ color: 'black', fontSize: 22, fontWeight: 'bold' }}>TESBİHİ SIFIRLA</Text>
         </TouchableOpacity>
       </View>
+
     </View>
+  </View>
+  </SafeAreaView>
   );
 };
 
@@ -72,6 +79,12 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     margin: 3,
   },
+  counter:{ flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+  },
+  
   tnum: {
     borderWidth: 5,
     borderColor: '#208796',
@@ -80,7 +93,7 @@ const styles = StyleSheet.create({
     fontSize: 60,
   },
   btnwrap: {
-    marginTop: 20,
+    marginTop: 10,
   },
   rbtn: {
     padding: 15,
@@ -93,6 +106,8 @@ const styles = StyleSheet.create({
     shadowRadius: 33,
     elevation: 3,
   },
+
+  
 });
 
 export default Tesbih;

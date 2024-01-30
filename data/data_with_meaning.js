@@ -4907,29 +4907,6 @@ export const dataWithMeaning =
                         "meaning": "Bakara, Câlut, Calut, Tâlut, Talut, Savaş, Tevhit, Tövbe, Tevbe, Af, Güç, Kuvvet, Ṣehit, Ṣehitlik"
                     },
                     {
-                        "id": 319,
-                        "surah_id": 3,
-                        "surah_name": "Âl-i İmran",
-                        "verse_number": 26,
-                        "verse": "قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَن تَشَاء وَتَنزِعُ الْمُلْكَ مِمَّن تَشَاء وَتُعِزُّ مَن تَشَاء وَتُذِلُّ مَن تَشَاء بِيَدِكَ الْخَيْرُ إِنَّكَ عَلَىَ كُلِّ شَيْءٍ قَدِيرٌ",
-                        "page": 52,
-                        "juzNumber": 3,
-                        "transcription": "Kulillahumme malikel mulki tu'til mulke men teşau ve tenziul mulke mimmen teşa', ve tuizzu men teşau ve tuzillu men teşa', bi yedikel hayr, inneke ala kulli şey'in kadir.",
-                        "translation": {
-                          "id": 5409,
-                          "author": {
-                            "id": 8,
-                            "name": "Bayraktar Bayraklı",
-                            "description": "Yeni Bir Anlayışın Işığında Kur'an Meali",
-                            "language": "tr"
-                          },
-                          "text": "Ey mutlak egemenlik sahibi Allahım! Sen egemenliği dilediğine verirsin, dilediğinden alırsın; dilediğini yüceltirsin, dilediğini alçaltırsın. Bütün iyilikler senin elindedir. Doğrusu, senin her şeye gücün yeter.",
-                          "footnotes": null
-                        },
-                        "surah_audio": "https://archive.org/download/INDIRILIS_SIRASINA_GORE_SESLI_KURAN_MEALI/89-aliimran.mp3",
-                        "meaning": "Sebat, Azim, Metanet, Sabır, Direnme, Âl-i İmrân, Ali İmran, Güç, Kuvvet, Tevhit"
-                    },
-                    {
                         "id": 309,
                         "surah_id": 3,
                         "surah_name": "Âl-i İmran",

@@ -14,7 +14,8 @@ import { Audio } from 'expo-av';
 import {dataWithMeaning} from '../data/data_with_meaning';
 import shareIcon from '../assets/shareIcon.png';
 import logoHorizontal3 from '../assets/logoHorizontal3.png';
-
+import playIcon from '../assets/playIcon.png';
+import stopIcon from '../assets/stopIcon.png';
 
 
 
@@ -141,7 +142,9 @@ const Home = () => {
   }
 
   return (
-    <SafeAreaView style={{backgroundColor: 'transparent'}}>
+    
+    <SafeAreaView style={{ backgroundColor: 'transparent', flex: 1 }}>
+
 
       <View style={styles.container}>
 
@@ -181,33 +184,32 @@ const Home = () => {
           }
           />
       
-      {matchingVerses.length > 0 && 
-        <ScrollView style={styles.resultsContainer}>
+    
+      
+        
            {showPleaseTypeWarning && (
             <View style={styles.warningContainer}>
               <Text style={styles.warningText}>⚠️ Lütfen aradığınız kelimeyi yazın</Text>
             </View>
+            
           )}
           {noResultFoundWarning && (
             <View style={styles.warningContainer}>
               <Text style={styles.warningText}>۞ Aradığınız Kelime Bulunamadı </Text>
             </View>
-)}
-
-
-
             
-          <View style={{height:'auto', padding: 2}}>
-
-          {matchingVerses.length > 0 && 
-          <>
-       
-
+          )}
+ 
+          
+          
+          {matchingVerses.length > 0 && (
+            <ScrollView style={styles.resultsContainer}>
+            {/* <View style={{height:'auto', padding: 2}}> */}
           <Text style={{fontWeight: "bold", fontSize:18}}>
            Bulunan Dua Sayısı: {matchingVerses.length}{'\n'}
           </Text>
-          </>
-           } 
+          
+            
 
            {matchingVerses.map((verse, index) => (
 
@@ -247,7 +249,15 @@ const Home = () => {
               
               {verse.surah_audio && (
               <TouchableOpacity style={styles.playerButton} onPress={() => playSound(verse.surah_audio)}>
+              <View >
+            <View style={styles.shareButtonContent}>
+              <Image
+                source={playIcon}
+                style={{ width: 20, height: 20, marginRight: 2 }}
+              />
               <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'orange', }}>DİNLE</Text>
+              </View>
+          </View>
               </TouchableOpacity>
               )}
               
@@ -257,7 +267,15 @@ const Home = () => {
              sound.stopAsync();
              setSound(null);
            }}>
+              <View >
+            <View style={styles.shareButtonContent}>
+              <Image
+                source={stopIcon}
+                style={{ width: 20, height: 20, marginRight: 2 }}
+              />
               <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#102844', }}>DURDUR</Text>
+              </View>
+          </View>
              </TouchableOpacity>
            )}
 
@@ -265,10 +283,10 @@ const Home = () => {
 </View>
            
           ))}
-           </View>
-        </ScrollView>}
-      </View>
-    </SafeAreaView>
+           </ScrollView>
+      )}
+    </View>
+  </SafeAreaView>
   );
 };
 
@@ -294,7 +312,8 @@ const styles = StyleSheet.create({
 
   container: {
     margin: 3,
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    flex:1,
   },
 
   logoContainer: {
@@ -398,7 +417,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: 'black',
     backgroundColor: 'lightgrey',
+    height: '100%',
+    flex: 1,
     
+
+
  },
 
  
