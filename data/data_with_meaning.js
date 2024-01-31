@@ -1571,10 +1571,10 @@ export const dataWithMeaning =
                 "surah_id": "/ Buhârî, Ta’bîr, 3, 46; Müslim, Rü’yâ",
                 "surah_name": "Kötü Rüya Görenler ve Uykuda Korkanlar İçin Okunabilecek Dualar-1",
                 "verse_number": 3,
-                "verse": "ِجيمَنِّ الشَّيْطَانِ الرُّجِيمِأُعوذُبِاللَّهِ هِِٰ",                      
+                "verse": "ِجيمَنِّ الشَّيْطَانِ الرُّجِيمِأُعوذُبِاللَّهِ هِِٰبِسْمِ اللّهِ الرَّحْمَنِ الرَّحِيمِ",                      
                 "page": 605,
                 "juzNumber": 3,
-                "transcription": "E’ûzü billâhi mine’ş-şeytâni’r-racîm",
+                "transcription": "E’ûzü billâhi mine’ş-şeytâni’r-racîm. Bismillahir rahmanir rahim.",
                 "translation": {
                 "id": 999999,
                 "author": {
@@ -1583,7 +1583,7 @@ export const dataWithMeaning =
                     "description": "Yeni Bir Anlayışın Işığında Kur'an Meali",
                     "language": "tr"
                 },
-                "text": "Kovulmuş şeytandan Allah’a sığınırım",
+                "text": "Kovulmuş şeytandan Allah’a sığınırım. Rahmet ve merhametin kaynağı olan Allah'ın adıyla.",
                 "footnotes": null
                 },
                 "surah_audio": "",
@@ -2233,29 +2233,6 @@ export const dataWithMeaning =
                             "footnotes": null
                             },
                             "surah_audio": "",
-                            "meaning": "Nikâh, Nikah, Evlilik, Evlenme, Evlenmek"
-                        },
-                        {
-                            "id": 2929,
-                            "surah_id": 25,
-                            "surah_name": "Furkan",
-                            "verse_number": 74,
-                            "verse": "وَالَّذِينَ يَقُولُونَ رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا",
-                            "page": 365,
-                            "juzNumber": 19,
-                            "transcription": "Vellezine yekulune rabbena heb lena min ezvacina ve zurriyyatina kurrete a'yunin vec'alna lil muttekine imama.",
-                            "translation": {
-                              "id": 49677,
-                              "author": {
-                                "id": 8,
-                                "name": "Bayraktar Bayraklı",
-                                "description": "Yeni Bir Anlayışın Işığında Kur'an Meali",
-                                "language": "tr"
-                              },
-                              "text": "Ey Rabbimiz! Bize gözümüzü aydınlatacak eşler, çocuklar bağışla ve bizi, Allah'a saygılı olanlara önder kıl!",
-                              "footnotes": null
-                            },
-                            "surah_audio": "https://archive.org/download/INDIRILIS_SIRASINA_GORE_SESLI_KURAN_MEALI/42-furkan.mp3",
                             "meaning": "Nikâh, Nikah, Evlilik, Evlenme, Evlenmek"
                         },
                         {

@@ -23,7 +23,7 @@ const About = () => {
       <Text style={{fontWeight: "bold"}}>C:  duaatlasi@gmail </Text>
       
 
-      {/* <Text style={{fontSize: 11}}>Kaynak: DUALAR - Diyanet İşleri Başkanlığı Yayınları: 671. 8. Baskı, 2019 Ankara </Text>  */}
+      
       </View>
 
 

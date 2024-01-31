@@ -7,7 +7,8 @@ import {
   ScrollView,
   Share,
   TouchableOpacity,
-  Image
+  Image,
+  Dimensions,
 } from 'react-native';
 import { SearchBar } from 'react-native-elements';
 import { Audio } from 'expo-av';
@@ -27,7 +28,11 @@ const Home = () => {
   const [sound, setSound] = useState();
   const [showPleaseTypeWarning, setShowPleaseTypeWarning] = useState(false);
   const [noResultFoundWarning, setNoResultFoundWarning] = useState(false);
-
+  const screenWidth = Dimensions.get('window').width;
+  
+ 
+  
+  
 
   const convertToLatin = (text) => {
     const turkishToLatinMap = {
@@ -140,6 +145,7 @@ const Home = () => {
     onShare(selectedVerse);
   
   }
+  
 
   return (
     
@@ -153,7 +159,7 @@ const Home = () => {
 
       <Image 
         source={logoHorizontal3}
-        style={styles.logo}
+        style={[styles.logo, { height: screenWidth > 600 ? 100 : 44 }]}
       />
       
       </View>
@@ -169,7 +175,7 @@ const Home = () => {
           round={true}
           justifyContent="center"
           inputStyle={{
-            fontSize: 27,
+            fontSize: 26,
             color: 'black',
             }}
 
@@ -324,7 +330,7 @@ const styles = StyleSheet.create({
   logo: {
     width: 'auto',
     height: 44,
-   
+   resizeMode: 'stretch'
   
  
   },

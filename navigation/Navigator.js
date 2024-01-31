@@ -1,8 +1,8 @@
-            import React from 'react';
+            import React, { useState, useEffect }  from 'react';
             import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-            import { StatusBar } from 'react-native';
+            import { StatusBar, Dimensions } from 'react-native';
             import About from '../pages/about';
-            // import Members from '../pages/Members';
+           
             import Content from '../pages/Content';
             import Home from '../pages/Home';
             import Tesbih from '../pages/Tesbih';
@@ -10,6 +10,19 @@
             const Tab = createMaterialTopTabNavigator();
 
             const TopTabsNavigator = () => {
+              const [fontSize, setFontSize] = useState(12);
+
+              useEffect(() => {
+                const screenWidth = Dimensions.get('window').width;
+                const fontSizeThreshold = 600; 
+            
+                if (screenWidth >= fontSizeThreshold) {
+                  setFontSize(20); 
+                } else {
+                  setFontSize(12);
+                }
+              }, []);
+
               return (
                 <>
                 <StatusBar barStyle="dark-content" />
@@ -19,8 +32,8 @@
               screenOptions={{
                 tabBarActiveTintColor: 'gold',
                 tabBarLabelStyle: {
-                fontSize: 12,
-                marginTop: 42, 
+                fontSize: fontSize,
+                marginTop: 43, 
                 fontWeight: 'bold',
                },
                
@@ -36,7 +49,7 @@
                   <Tab.Screen name="KILAVUZ" component={Content} />
                   <Tab.Screen name="TESBİH" component={Tesbih} /> 
                   <Tab.Screen name="HAKKINDA" component={About} />
-                  {/* <Tab.Screen name="REKLAMLARI KAPAT" component={Members} /> */}
+                  
                   
                 </Tab.Navigator>
                 </>

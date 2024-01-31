@@ -10,7 +10,9 @@ import stopIcon from '../assets/stopIcon.png';
 
 
 const Content = () => {
-  const [selectedSurahName, setSelectedSurahName] = useState(null);
+
+  
+  const [selectedSurahName, setSelectedSurahName] = useState("null");
   const [selectedTranslation, setSelectedTranslation] = useState(null);
   const [sound, setSound] = useState();
 
@@ -31,10 +33,9 @@ const Content = () => {
 
   const handleSurahNameChange = (value) => {
     setSelectedSurahName(value);
-    console.log('Selected Surah Name:', value);
+    console.log('Selected Surah Name:', typeof value);
   };
 
- 
 
   React.useEffect(() => {
     if (selectedSurahName !== null|| surahNames.length === 0) {
@@ -139,10 +140,10 @@ const Content = () => {
               <ScrollView style={styles.resultsContainer}>
               
           
-            {selectedSurahName === null  ? (
+            {selectedSurahName == "null"  ? (
               <View style={styles.resultItem}>
-                <Text style={{ fontSize: 20 }}>
-                  ۞ Toplam dua sayısı: {surahNames.length}
+                <Text style={{ fontSize: 15 }}>
+                  ۞ Toplam dua sayısı: {surahNames.length}{'\n'}Listeden okumak istediğiniz duayı seçiniz.
                 </Text>
               </View>
             ) : (

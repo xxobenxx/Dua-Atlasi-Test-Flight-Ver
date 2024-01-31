@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, Dimensions } from 'react-native';
 
 
 const Tesbih = () => {
   const [count, setCount] = useState('۞');
   const [resetCounter, setResetCounter] = useState(1);
+  const [fontSize, setFontSize] = useState(14);
+
+  useEffect(() => {
+    const screenWidth = Dimensions.get('window').width;
+    const fontSizeThreshold = 600; 
+
+    if (screenWidth >= fontSizeThreshold) {
+      setFontSize(25); 
+    } else {
+      setFontSize(14);
+    }
+  }, []);
 
 
   const reset = () => {
@@ -36,7 +48,7 @@ const Tesbih = () => {
 
       <Text style={{ margin:5}} >
 
-      <Text style={{ color: 'black', fontSize: 14, fontWeight: 'bold', textAlign: 'center' }}>
+      <Text style={{ color: 'black', fontSize: fontSize, fontWeight: 'bold', textAlign: 'center' }}>
       "Allahu la ilahe illa huvel hayyul kayyum, la te'huzuhu sinetun ve la nevm, lehu ma fis semavati ve ma fil ard, 
       menzellezi yeşfeu indehu illa bi iznih ya'lemu ma beyne eydihim ve ma halfehum, ve la yuhitune bi şey'in min 
       ilmihi illa bi ma şae, vesia kursiyyuhus semavati vel ard, ve la yeuduhu hıfzuhuma ve huvel aliyyul azim."
