@@ -29,9 +29,18 @@ const Home = () => {
   const [showPleaseTypeWarning, setShowPleaseTypeWarning] = useState(false);
   const [noResultFoundWarning, setNoResultFoundWarning] = useState(false);
   const screenWidth = Dimensions.get('window').width;
-  
+  const [fontSize, setFontSize] = useState(16);
  
-  
+  useEffect(() => {
+    const screenWidth = Dimensions.get('window').width;
+    const fontSizeThreshold = 600; 
+
+    if (screenWidth >= fontSizeThreshold) {
+      setFontSize(20); 
+    } else {
+      setFontSize(16);
+    }
+  }, []);
   
 
   const convertToLatin = (text) => {
@@ -210,8 +219,8 @@ const Home = () => {
           
           {matchingVerses.length > 0 && (
             <ScrollView style={styles.resultsContainer}>
-            {/* <View style={{height:'auto', padding: 2}}> */}
-          <Text style={{fontWeight: "bold", fontSize:18}}>
+            
+          <Text style={{fontWeight: "bold", fontSize:fontSize}}>
            Bulunan Dua Sayısı: {matchingVerses.length}{'\n'}
           </Text>
           
@@ -223,16 +232,16 @@ const Home = () => {
               
             <View key={verse.id} style={styles.verseContainer}>
               
-              <Text style={styles.verseText} > 
-              <Text style={{fontWeight: "bold"}}>{verse.verse}</Text> 
+              <Text style={{ marginVertical: 3, fontSize: fontSize }} > 
+              <Text style={{fontWeight: "bold"}}>{verse.verse}</Text>{'\n'} 
               </Text>
-              <Text style={styles.verseText}>
-              <Text style={{fontWeight: "bold"}}>Okunuşu:</Text> {verse.transcription}
+              <Text style={{ marginVertical: 3, fontSize: fontSize }} >
+              <Text style={{fontWeight: "bold"}}>Okunuşu:</Text> {verse.transcription}{'\n'}
               </Text>
-              <Text style={styles.verseText}>
-              <Text style={{fontWeight: "bold"}}>Meali       :</Text> {verse.translation.text}
+              <Text style={{ marginVertical: 3, fontSize: fontSize }} >
+              <Text style={{fontWeight: "bold"}}>Meali        :</Text> {verse.translation.text}
               </Text>
-              <Text style={{fontWeight: "bold",fontSize: 15, marginTop: 3,}}>({verse.surah_name} {verse.surah_id}/ {verse.verse_number})</Text>
+              <Text style={{fontWeight: "bold",fontSize: fontSize, marginTop: 3,}}>({verse.surah_name} {verse.surah_id}/ {verse.verse_number})</Text>
 
              <TouchableOpacity
              
@@ -368,7 +377,7 @@ const styles = StyleSheet.create({
   
   shareButtonContainer: {
     alignItems: 'flex-start',
-    marginBottom: 5,
+   marginBottom: 5,
   },
 
   shareButton: {
@@ -396,13 +405,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderColor: 'gray',
     marginVertical: 2,
+    padding: 5
   
-  },
-
-  verseText: {
-    fontSize: 16,
-    marginVertical: 3,
-
   },
 
   playerButton: {
@@ -418,6 +422,7 @@ const styles = StyleSheet.create({
 
  resultsContainer: {
     margin: 5,
+    padding: 5,
     alignSelf: 'center',
     borderWidth: 1,
     borderRadius: 5,

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, ScrollView, StyleSheet, SafeAreaView, TouchableOpacity, Image, Share } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, ScrollView, StyleSheet, SafeAreaView, TouchableOpacity, Image, Share, Dimensions } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import { dataWithMeaning } from '../data/data_with_meaning';
 import { Audio } from 'expo-av';
@@ -15,7 +15,19 @@ const Content = () => {
   const [selectedSurahName, setSelectedSurahName] = useState("null");
   const [selectedTranslation, setSelectedTranslation] = useState(null);
   const [sound, setSound] = useState();
+  const [fontSize, setFontSize] = useState(16);
 
+  useEffect(() => {
+    const screenWidth = Dimensions.get('window').width;
+    const fontSizeThreshold = 600; 
+
+    if (screenWidth >= fontSizeThreshold) {
+      setFontSize(20); 
+    } else {
+      setFontSize(16);
+    }
+  }, []);
+  
   const surahNames = [...new Set(dataWithMeaning.map((verse) => verse.surah_name))];
   surahNames.sort((a, b) => {
     const [aPrefix, aNumber] = a.split('-');
@@ -46,9 +58,9 @@ const Content = () => {
               <Text>
              <Text style={{ fontWeight: 'bold', fontSize: 25}}>{verse.surah_name}</Text>{'\n'}
 
-              <Text style={{ fontWeight: 'bold', fontSize: 16 }}>{verse.surah_id}</Text>
+              <Text style={{ fontWeight: 'bold', fontSize: fontSize }}>{verse.surah_id}</Text>
               
-              <Text style={{fontSize: 16 }}>{'\n\n'}{verse.verse}
+              <Text style={{fontSize: fontSize }}>{'\n\n'}{verse.verse}
 
               <Text style={{ fontWeight: 'bold' }}> {'\n\nOkunuşu: '}</Text>
               {verse.transcription}
@@ -142,7 +154,7 @@ const Content = () => {
           
             {selectedSurahName == "null"  ? (
               <View style={styles.resultItem}>
-                <Text style={{ fontSize: 15 }}>
+                <Text style={{ fontSize: fontSize }}>
                   ۞ Toplam dua sayısı: {surahNames.length}{'\n'}Listeden okumak istediğiniz duayı seçiniz.
                 </Text>
               </View>
@@ -157,11 +169,11 @@ const Content = () => {
                       {verse.surah_name}
                       </Text>{'\n'}
 
-                <Text style={{ fontWeight: 'bold', fontSize: 16 }}>
+                <Text style={{ fontWeight: 'bold', fontSize: fontSize }}>
                       {verse.surah_id}
               </Text>
 
-              <Text style={{fontSize: 16 }}>
+              <Text style={{fontSize: fontSize }}>
               {'\n\n'}
               {verse.verse}
 
@@ -240,8 +252,8 @@ const Content = () => {
 const styles = StyleSheet.create({
   
   resultsContainer: {
-   margin: 3,
-   padding: 3,
+   margin: 5,
+   padding: 5,
    backgroundColor: '#b8a8b4',
    borderWidth: 2,
    borderColor: 'gray',  
@@ -257,6 +269,7 @@ const styles = StyleSheet.create({
   shareButtonContainer: {
     alignItems: 'flex-start',
     marginBottom: 3,
+    marginLeft: 5,
     
   },
 
@@ -287,7 +300,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#208796',
       borderRadius: 10,
       padding: 5,
-      marginBottom: 5,
+      margin: 5,
       borderColor: 'black',
       alignItems: 'center',
       
