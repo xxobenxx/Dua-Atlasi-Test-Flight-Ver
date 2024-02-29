@@ -25,7 +25,7 @@
 
               return (
                 <>
-                <StatusBar barStyle="dark-content" />
+               <StatusBar barStyle="dark-content"backgroundColor="rgb(22, 93, 49)" />
                 <Tab.Navigator 
 
                 
@@ -33,7 +33,6 @@
                 tabBarActiveTintColor: 'gold',
                 tabBarLabelStyle: {
                 fontSize: fontSize,
-                marginTop: 43, 
                 fontWeight: 'bold',
                },
                

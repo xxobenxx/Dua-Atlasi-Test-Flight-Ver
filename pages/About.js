@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     },
 
     contact: {
-      alignItems: 'flex-start',
+      alignItems: 'center',
       textAlign: 'left',  
       },
 

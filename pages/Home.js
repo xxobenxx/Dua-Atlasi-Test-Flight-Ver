@@ -22,6 +22,7 @@ import stopIcon from '../assets/stopIcon.png';
 
 
 
+
 const Home = () => {
   const [searchText, setSearchText] = useState('');
   const [matchingVerses, setMatchingVerses] = useState([]);
@@ -30,6 +31,7 @@ const Home = () => {
   const [noResultFoundWarning, setNoResultFoundWarning] = useState(false);
   const screenWidth = Dimensions.get('window').width;
   const [fontSize, setFontSize] = useState(16);
+  
  
   useEffect(() => {
     const screenWidth = Dimensions.get('window').width;
@@ -301,6 +303,9 @@ const Home = () => {
            </ScrollView>
       )}
     </View>
+
+    
+
   </SafeAreaView>
   );
 };
