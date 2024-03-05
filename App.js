@@ -71,7 +71,8 @@ const styles = StyleSheet.create({
     
     backgroundColor: 'transparent',
     flex:1,
-    marginTop: -10,
+    marginTop: -5,
+    
   },
 })
 

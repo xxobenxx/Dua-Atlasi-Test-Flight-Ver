@@ -25,7 +25,7 @@
 
               return (
                 <>
-               <StatusBar barStyle="dark-content"backgroundColor="rgb(22, 93, 49)" />
+               <StatusBar barStyle="dark-content" backgroundColor="rgb(22, 93, 49)" />
                 <Tab.Navigator 
 
                 

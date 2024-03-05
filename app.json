@@ -17,6 +17,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.elbuenoservices.duaatlasi",
+      "buildNumber": "1.0.0",
       "infoPlist": {
         "UIBackgroundModes": [
           "audio"
@@ -33,10 +34,10 @@
     },
     "extra": {
       "eas": {
-        "projectId": "2c76044d-cd54-409e-83c7-a20dfd3f7076"
+        "projectId": "2d212810-115a-47d6-8e28-f9f911f728aa"
       }
     },
-    "owner": "elbuenodigital",
+    "owner": "obenx",
     "runtimeVersion": {
       "policy": "appVersion"
     },
@@ -51,27 +52,7 @@
         "react-native-permissions",
         {
           "iosPermissions": [
-            "AppTrackingTransparency",
-            "Bluetooth",
-            "Calendars",
-            "CalendarsWriteOnly",
-            "Camera",
-            "Contacts",
-            "FaceID",
-            "LocationAccuracy",
-            "LocationAlways",
-            "LocationWhenInUse",
-            "MediaLibrary",
-            "Microphone",
-            "Motion",
-            "Notifications",
-            "PhotoLibrary",
-            "PhotoLibraryAddOnly",
-            "Reminders",
-            "Siri",
-            "SpeechRecognition",
-            "StoreKit"
-
+            "AppTrackingTransparency"
           ]
         }
       ]
