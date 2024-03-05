@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "duaatlasi",
-    "slug": "duaatlasi",
-    "version": "1.0.1",
+    "name": "duaatlasiandroid",
+    "slug": "duaatlasiandroid",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon2.png",
     "userInterfaceStyle": "light",
@@ -17,7 +17,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.elbuenoservices.duaatlasi",
-      "buildNumber": "1.0.1",
+      "buildNumber": "1.0.0",
       "infoPlist": {
         "splash": {
           "image": "./assets/splash2.png",
@@ -31,7 +31,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "2d212810-115a-47d6-8e28-f9f911f728aa"
+        "projectId": "f00e25ee-684d-4f67-bb01-01c0dbc4d8f3"
       }
     },
     "owner": "obenx",
