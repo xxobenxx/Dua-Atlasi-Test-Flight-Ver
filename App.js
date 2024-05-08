@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 import {  View,StyleSheet,SafeAreaView,} from 'react-native';
 
 const App = () => {
-  const adUnitId = __DEV__ ? TestIds.ADAPTIVE_BANNER : 'ca-app-pub-6223089259266030/4240143625';
+  const adUnitId = __DEV__ ? TestIds.ADAPTIVE_BANNER : 'ca-app-pub-XXXXXXXXXXXX';
   const [adsLoaded, setAdsLoaded] = useState(false);
   const [isAdClosed, setIsAdClosed] = useState(false);
 
