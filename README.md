@@ -1,4 +1,4 @@
-# Dua Atlasi (Prayer Atlas) Responsive Mobile App
+# Dua Atlası (Prayer Atlas) Responsive Mobile App
 
 This repository contains a responsive app with over 250 islamic prayers, a powerful single keyword search and sharing features, audio surahs, and digital prayer beads.
 Only in Turkish for now.
