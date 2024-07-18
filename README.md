@@ -27,5 +27,5 @@ Follow these steps to install and set up the application on your local machine:
    cd your-repo-name -> npm install   
 ```
 
-Or you can directly download it from [App Store]([https://link-to-your-app-on-apple-store](https://apple.co/3PiC1M4)) or [Google Play Store]([https://link-to-your-app-on-google-play](https://play.google.com/store/apps/details?id=com.elbuenoservices.duaatlasi)).
+Or you can directly download it from [App Store](https://apple.co/3PiC1M4) or [Google Play Store](https://play.google.com/store/apps/details?id=com.elbuenoservices.duaatlasi).
 
