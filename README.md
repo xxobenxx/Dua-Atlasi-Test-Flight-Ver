@@ -1,4 +1,4 @@
-#Dua Atlasi (Prayer Atlas) Responsive Mobile App
+##Dua Atlasi (Prayer Atlas) Responsive Mobile App
 
 This repository contains a responsive app with over 250 islamic prayers, a powerful single keyword search and sharing features, audio surahs, and digital prayer beads.
 Easy navigation and a rich user experience, available on both the Apple Store and Google Play Store.
@@ -8,7 +8,7 @@ This project highlights my skills in developing cross-platform applications with
 Tools Used: 
 React Native, JS
 
-## Installation
+#Installation
 
 Follow these steps to install and set up the application on your local machine:
 
@@ -21,11 +21,11 @@ Follow these steps to install and set up the application on your local machine:
 ```
 
 
-## Running The Application
+#Running The Application
 
 ```sh
    cd your-repo-name -> npm install   
 ```
 
-Or you can directly download it from [App Store](https://apple.co/3PiC1M4) or [Google Play Store](https://play.google.com/store/apps/details?id=com.elbuenoservices.duaatlasi).
+#Or you can directly download it from [App Store](https://apple.co/3PiC1M4) or [Google Play Store](https://play.google.com/store/apps/details?id=com.elbuenoservices.duaatlasi).
 
